@@ -5,7 +5,7 @@
 This text will contain thoughts on good API design.
 
 
-## Introduction: Go, go and garbage collection
+## Go, go and garbage
 
 ![go](go.jpg)
 
@@ -48,9 +48,9 @@ Still, it's not uncommon to see README files that starts with
 "Candide now supports the Pangloss 3.2 file format"
 but never tells what Candide is and what it has to offer.
 
-In the [github.com/yourbasic/fenwick][fenwick] repository
-I stick my neck out and attempt to implement a small library
-as best I can. Take a look, and don't hesitate to open an issue
+In the [fenwick repo][fenwick] I stick my neck out
+and attempt to implement a small library as best I can.
+Take a look, and don't hesitate to open an issue
 if the purpose of the library is unclear.
 
 ### 2. Tell me what the code does!
@@ -58,7 +58,7 @@ if the purpose of the library is unclear.
 > An API should say what the code *does*.
 
 If a potential user gets past the README file, and dives into the
-[fenwick documentation][fenwickDOC], she probably wants the full story.
+[fenwick doc][fenwickDOC], she probably wants the full story.
 Telling it three times is often a good approach.
 
 First a short sentence stating the purpose of the package.
@@ -92,20 +92,32 @@ that get this right. In general, a Go programmer doesn't have to,
 and doesn't want to, worry about the intricacies of garbage collection
 and threading. "It just works."
 
-In the [fenwick documentation][fenwickDOC] I didn't manage to hide
+In the [fenwick repo][fenwick] I didn't manage to hide
 the implementation details completely, even though I tried:
 
 - The data type is called `List`, not `Tree`. That's because it *does*
   the job of a list, even though it's implemented as a tree.
   I surely got that right.
  
-- The cheesy stock picture in the README file depicts a list.
+- The cheesy stock picture in the README file depicts a list, not a tree.
   Perhaps I got that right.
 
 - The data structure is known as a Fenwick tree, or binary indexed tree.
   I couldn't change that. But it was my decision to include a few
   implementation details at the very end of the package documentation.
   Sorry about that.
+  
+However, the documentation of the `fenwick.List`data type and its methods
+describes what the code does without telling anything about how it works.
+This has two major benefits:
+
+- The library should be fairly easy to use. If you know what a list is,
+  you're ready to go.
+- There is plenty of room for improving and modifying the implementation
+  without breaking backwards compatability.
+  
+That's a nice place to be in.
+
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
