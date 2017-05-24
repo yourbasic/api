@@ -32,13 +32,15 @@ that are safe, efficient and easy to use.
 ## Basics
 
 Let's start with the basic stuff. The rules never to be broken.
-The rules you can't even argue with, but that we still need
+The rules we can't even argue with, but that we still need
 to be reminded of, becuase we occasionally forget about them.
 
-### Tell me what it is!
+### 1. Tell me what this thing is!
+
+#### The README file
 
 > A software repository should have a `README` file,
-> and this file should say what the project is about.
+> and this file should say what the project *is about*.
 > Preferably in the very first sentence.
 
 If people don't know what it is, they can't use it, duh.
@@ -51,6 +53,59 @@ I stick my neck out and attempt to implement a small library
 as best I can. Take a look, and don't hesitate to open an issue
 if the purpose of the library is unclear.
 
+### 2. Tell me what the code does!
+
+> An API should say what the code *does*.
+
+If a potential user gets past the README file, and dives into the
+[fenwick documentation][fenwickDOC], she probably wants the full story.
+Telling it three times is often a good approach.
+
+First a short sentence stating the purpose of the package.
+
+    Package fenwick provides a list data structure supporting prefix sums.
+
+Then a slightly longer explanation.
+
+    A Fenwick tree, or binary indexed tree, is a space-efficient
+    list data structure that can efficiently update elements and
+    calculate prefix sums in a list of numbers.
+    
+And finally, all the nitty-gritty details for those who intend to
+acually use the code.
+
+    Compared to a common array, a Fenwick tree achieves better
+    balance between element update and prefix sum calculation –
+    both operations run in O(log n) time – while using the same
+    amount of memory. This is achieved by representing the list
+    as an implicit tree, where the value of each node is the sum
+    of the numbers in that subtree.
+
+
+### 3. Don't tell me how it works!
+
+> If at all possible, an API *shouldn't* reveal any
+> details of the implemenatation.
+
+Threading and garbage collection in Go are two great examples of interfaces
+that get this right. In general, a Go programmer doesn't have to,
+and doesn't want to, worry about the intricacies of garbage collection
+and threading. "It just works."
+
+In the [fenwick documentation][fenwickDOC] I didn't manage to hide
+the implementation details completely, even though I tried:
+
+- The data type is called `List`, not `Tree`. That's because it *does*
+  the job of a list, even though it's implemented as a tree.
+  I surely got that right.
+ 
+- The cheesy stock picture in the README file depicts a list.
+  Perhaps I got that right.
+
+- The data structure is known as a Fenwick tree, or binary indexed tree.
+  I couldn't change that. But it was my decision to include a few
+  implementation details at the very end of the package documentation.
+  Sorry about that.
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
@@ -60,4 +115,5 @@ if the purpose of the library is unclear.
 [gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
+[fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 
