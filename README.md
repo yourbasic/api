@@ -130,11 +130,11 @@ That's a nice place to be in.
 
 > Every public software project needs a license.
 
-I'm not a lawyer, but it's my understanding that code without
-a license can only be legally used by its author.
+I'm not a lawyer and this is not legal advice, but it's my understanding
+that code without a license can only be legally used by its author.
 
 If your're looking for paying customers, you may want to seek
-proper legal advice on licensing. However, to turn your project into
+actual legal advice on licensing. However, to turn your project into
 free and open-source software is easy: just put the proper
 license text in the right places.
 
