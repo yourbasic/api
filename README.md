@@ -36,10 +36,10 @@ The rules we can't even argue with, but that we still need
 to be reminded of, becuase we occasionally forget about them.
 
 
-### 1. Tell me what this thing is!
+### 1. Tell me what this thing is
 
 > A software repository should have a `README` file,
-> and this file should say what the project *is about*.
+> and this file should say what the project **is about**.
 > Preferably in the very first sentence.
 
 If people don't know what it is, they can't use it, duh.
@@ -47,18 +47,24 @@ Still, it's not uncommon to see README files that starts with
 "Candide now supports the Pangloss 3.2 file format"
 but never tells what Candide is and what it has to offer.
 
-In the [fenwick repo][fenwick] I stick my neck out
-and attempt to implement a small library as best I can.
-Take a look, and don't hesitate to open an issue
-if the purpose of the library is unclear.
+In the [Fenwick repo][fenwick] I stick my neck out and try to
+implement a small library that follows all of the basic rules.
+Its README file starts out like this:
 
+    # Your basic Bloom filter
 
-### 2. Tell me what it does!
+    ### Golang probabilistic set data structure
 
-> An API should say what the code *does*.
+    A Bloom filter is a fast and space-efficient probabilistic
+    data structure used to test set membership. A membership test
+    returns either ”likely member” or ”definitely not a member”.
+
+### 2. Tell me what it does
+
+> An API should say what the code **does**.
 
 If a potential user gets past the README file, and dives into
-the [fenwick documentation][fenwickDOC], she probably wants
+the [Fenwick documentation][fenwickDOC], she probably wants
 the full story. Telling it three times is often a good approach.
 
 First a short sentence stating the purpose of the package.
@@ -82,9 +88,9 @@ acually use the code.
     of the numbers in that subtree.
 
 
-### 3. Don't tell me how it works!
+### 3. Don't tell me how it works
 
-> If at all possible, an API *shouldn't* reveal any
+> If at all possible, an API **shouldn't** reveal any
 > details of the implemenatation.
 
 Threading and garbage collection in Go are two great examples of interfaces
@@ -92,10 +98,10 @@ that get this right. In general, a Go programmer doesn't have to,
 and doesn't want to, worry about the intricacies of garbage collection
 and threading. "It just works."
 
-In the [fenwick repo][fenwick] I didn't manage to hide
+In the [Fenwick repo][fenwick] I didn't manage to hide
 the implementation details completely, even though I tried:
 
-- The data type is called `List`, not `Tree`. That's because it *does*
+- The data type is called `List`, not `Tree`. That's because it **does**
   the job of a list, even though it's implemented as a tree.
   I surely got that right.
  
@@ -119,7 +125,7 @@ This has two major benefits:
 That's a nice place to be in.
 
 
-### 4. Grant me the right to use it!
+### 4. Grant me the right to use it
 
 > Every public software project should have a license.
 
@@ -142,11 +148,45 @@ It's also easy to apply: you add a single file to the top
 directory of your repo.
 
 
+### 5. Don't change what it does
+
+> A software library needs to be backwards compatible.
+> It's fine to improve the documentation, change the implementation,
+> and even introduce new features. But, if at all possibe,
+> **don't change the behavior**.
+
+This is the tough one. There are two major problems here:
+
+- If you break this rule, you will break other people's code.
+- You need to get your API right at the very first shot.
+  You may not be able to fix it later on.
+
+It's not enough to just follow this rule, you also need to say that
+you are doing so. As a library provider you're in the business of trust.
+This is why your library needs to explain its compatability policies,
+and why it should use semantic versioning.
+
+#### Compatibility policies
+
+TODO: Use Fenwick as a simple example and Go 1 as an advanced example.
+
+[Go 1 and the Future of Go Programs][gocompat]
+
+#### Semantic versioning
+
+TODO: Briefly explain semantic versioning.
+
+[Semantic Versioning 2.0.0][sv]
+
+
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
+[gocompat]: https://golang.org/doc/go1compat
 [gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
+[sv]: http://semver.org/
+
 
