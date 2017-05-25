@@ -6,18 +6,10 @@ The aim of this text is to explore API design and try to find
 strategies and rules that could help us create code libraries
 that are safe, efficient and easy to use.
 
-Even though API design is as much an art as a science, there still
-are some fundamental rules that you should be aware of. Rules that
-will costly you dearly if you break them. Enough so that they
-deserve to be known as **The 5 Commandments**.
-
-
-## Go, go and garbage
-
 ![go](go.jpg)
 
-The examples in this text are written in [Go][go], the language itself
-being an outstanding example of good API design, with clean and simple
+The examples are written in [Go][go], the language itself being
+an outstanding example of good API design, with clean and simple
 interfaces on top of a huge complex implementation.
 
 The `go` keyword is particularly striking: the syntax couldn't
@@ -30,6 +22,11 @@ Garbage collection in Go is another remarkable example.
 The implementation is hideously complicated, while the API
 is null and void: there is no syntax and the language specification
 doesn't even mention the concept explicitly. It just works.
+
+Even though API design is as much an art as a science, there still
+are some fundamental rules that you should be aware of. Rules that
+will costly you dearly if you break them. Enough so that they
+deserve to be known as **The 5 Commandments**.
 
 
 ## The 5 Commandments
@@ -167,6 +164,7 @@ you are doing so. As a library provider you're in the business of trust.
 This is why your library needs to explain its compatability policy,
 and why you should consider using semantic versioning.
 
+
 #### Compatibility policy
 
 Fenwick's compatibility policy is very simple, but still explicitly stated:
@@ -184,8 +182,8 @@ Fenwick's compatibility policy is very simple, but still explicitly stated:
 compatibility document. It's required study for anyone working with
 large-scale library design and maintenance.
 
-#### Semantic versioning
 
+#### Semantic versioning
 
 [Semantic versioning][sv] is a convention for specifying compatibility
 using a three-part version number: `major.minor.patch`. You increment
