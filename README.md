@@ -25,7 +25,7 @@ doesn't even mention the concept explicitly. It just works.
 
 Even though API design is as much an art as a science, there still
 are some fundamental rules that you should be aware of. Rules that
-will costly you dearly if you break them. Enough so that they
+will cost you dearly if you break them. Enough so that they
 deserve to be known as **The 5 Commandments**.
 
 
