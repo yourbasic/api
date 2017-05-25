@@ -16,9 +16,9 @@ deserve to be known as **The 5 Commandments**.
 
 ![go](go.jpg)
 
-The examples in this text are written in Go, the language itself
+The examples in this text are written in [Go][go], the language itself
 being an outstanding example of good API design, with clean and simple
-interfaces on top of a huge and complex implementation.
+interfaces on top of a huge complex implementation.
 
 The `go` keyword is particularly striking: the syntax couldn't
 be simpler and the semantics are explained in
@@ -180,9 +180,9 @@ Fenwick's compatibility policy is very simple, but still explicitly stated:
     is to handle issues that can't be resolved in any other
     reasonable way.
 
-[Go 1 and the Future of Go Programs][gocompat] is a of a complex
-and detailed compatibility document. It's required study for anyone
-working with large-scale library design and maintenance.
+[Go 1 and the Future of Go Programs][gocompat] is a complex and detailed
+compatibility document. It's required study for anyone working with
+large-scale library design and maintenance.
 
 #### Semantic versioning
 
@@ -200,9 +200,11 @@ and that no new featues or patches have been introduced since then.
 Even so, it is a good convention to follow. And, once again,
 the Go project gets it right.
 
+
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
+[go]: https://github.com/golang/go
 [gocompat]: https://golang.org/doc/go1compat
 [gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
@@ -210,5 +212,3 @@ the Go project gets it right.
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [sv]: http://semver.org/
-
-
