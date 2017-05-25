@@ -87,6 +87,22 @@ And finally, the nitty-gritty for those who want to know it all.
     as an implicit tree, where the value of each node is the sum
     of the numbers in that subtree.
 
+#### Corollary
+
+The second commandment has an immediate corollary:
+
+> An API should say what **every exported function** does.
+
+Once again, if you don't know what it does you can't use it, duh.
+Undocumented functions are close to useless. The only way to use
+them safely is to perform a complete code review, including
+necessary testing. That tends to be more work than writing
+the &$#! code yourself.
+
+A descriptive function name is a good start, but only rarely does
+the name tell the full story. And the full story is what we need.
+In programming, there is no room for guesswork.
+
 
 ### 3. Don't tell me how it works
 
@@ -237,7 +253,7 @@ The only sure-fire way to know if an API works as intended
 is to use it over an extended period of time on different
 types of tasks and projects.
 
-TODO
+TODO:
 
 > To be a good API designer you will have to prepare and eat
 > your own dog food until you like it.
@@ -254,7 +270,7 @@ are built by putting together the right bits and pieces.
 This chapter contains a collection of API building blocks
 that have proven there worth over time.
 
-TODO
+TODO:
 
 ### Functions that need little and give much
 
