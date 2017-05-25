@@ -1,9 +1,9 @@
 # Your basic API
 
-## Thoughts on good API design
+### Thoughts on good API design
 
 The aim of this text is to explore API design and try to find
-strategies and rules that could help us create code libraries
+strategies and rules that can help us create code libraries
 that are safe, efficient and easy to use.
 
 ![go](go.jpg)
@@ -29,7 +29,7 @@ will costly you dearly if you break them. Enough so that they
 deserve to be known as **The 5 Commandments**.
 
 
-## The 5 Commandments
+# The 5 Commandments
 
 Let's start with the basic stuff. The rules never to be broken.
 The rules that we don't need to argue about, but that we still
@@ -198,6 +198,13 @@ and that no new featues or patches have been introduced since then.
 Even so, it is a good convention to follow. And, once again,
 the Go project gets it right.
 
+
+# Keep it simple
+
+Even though API design often requires us to make diffcult trade-offs,
+a simpler API is almost always a better API.
+
+TODO
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
