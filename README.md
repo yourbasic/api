@@ -47,8 +47,8 @@ Still, it's not uncommon to see README files that starts with
 "Candide now supports the Pangloss 3.2 file format"
 but never tells what Candide is and what it has to offer.
 
-In the [Fenwick repo][fenwick] I stick my neck out and try to
-implement a small library that follows all of the basic rules.
+In the [Fenwick repo][fenwick] I stick my neck out and implement
+a small library that tries to follow the 5 commandments.
 Its README file starts out like this:
 
     # Your basic Bloom filter
@@ -90,8 +90,7 @@ acually use the code.
 
 ### 3. Don't tell me how it works
 
-> If at all possible, an API **shouldn't** reveal any
-> details of the implemenatation.
+> If at all possible, an API **shouldn't** reveal any implemenatation details.
 
 Threading and garbage collection in Go are two great examples of interfaces
 that get this right. In general, a Go programmer doesn't have to,
@@ -127,7 +126,7 @@ That's a nice place to be in.
 
 ### 4. Grant me the right to use it
 
-> Every public software project should have a license.
+> Every public software project needs a license.
 
 I'm not a lawyer, but it's my understanding that code without
 a license can be legally used only by its author.
@@ -158,7 +157,7 @@ directory of your repo.
 This is the tough one. There are two major problems here:
 
 - If you break this rule, you will break other people's code.
-- You need to get your API right at the very first shot.
+- You need to get your API right at the very first attempt.
   You may not be able to fix it later on.
 
 It's not enough to just follow this rule, you also need to say that
