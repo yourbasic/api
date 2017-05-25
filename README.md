@@ -144,10 +144,7 @@ directory of your repo.
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
-*This text is licensed under a [CC BY 3.0 License][CCBY30]*
-
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
-[CCBY30]: https://creativecommons.org/licenses/by/3.0/
 [gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
