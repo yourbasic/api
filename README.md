@@ -146,12 +146,12 @@ It's also easy to apply: you add a single file to the top
 directory of your repo.
 
 
-### 5. Don't change what it does
+### 5. Don't change it
 
 > A software library needs to be backwards compatible.
 > It's fine to improve the documentation, change the implementation,
 > and even introduce new features. But, if at all possibe,
-> **don't change the behavior**.
+> **don't change the API**.
 
 This is the tough one. There are two major challenges here:
 
@@ -165,7 +165,7 @@ This is why your library needs to explain its compatability policy,
 and why you should consider using semantic versioning.
 
 
-#### Compatibility policy
+#### Compatibility policies
 
 Fenwick's compatibility policy is very simple, but still explicitly stated:
 
@@ -195,20 +195,78 @@ using a three-part version number: `major.minor.patch`. You increment
 The semantic versioning specification itself currently sits at version
 number `2.0.0`. This means that it broke  the fifth commandment,
 and that no new featues or patches have been introduced since then.
-Even so, it is a good convention to follow. And, once again,
+Even so, it's a good convention to follow. And, once again,
 the Go project gets it right.
 
 
 # Keep it simple
 
+![scissors](scissors.png)
+
+*Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
+
 Even though API design often requires us to make diffcult trade-offs,
 a simpler API is almost always a better API.
 
+TODO:
+
+Packages should be atomic, independent and composable.
+
+#### Atomic
+
+#### Independent
+
+#### Composable
+
+### Math is simple
+
+If you can model your API on a mathematical abstraction, such as a set
+or an interval, you're almost home free.
+
+### Consistent is simple
+
+
+# Don't rush it
+
+![rest](rest.jpg)
+
+*Rest at harvest, painting by [William-Adolphe Bouguereau][wab], public domain.*
+
+The only sure-fire way to know if an API works as intended
+is to use it over an extended period of time on different
+types of tasks and projects.
+
 TODO
+
+> To be a good API designer you will have to prepare and eat
+> your own dog food until you like it.
+
+
+# Tools of the trade
+
+![tool](tool.jpg)
+
+*Hobel mit Spänen und Zimmermannsbleistift, image by [Uwe Aranas][ua], [CC BY-SA 3.0][CCBYSA3].*
+
+Grand ideas and theories aside, in the end all human artefacts
+are built by putting together the right bits and pieces.
+This chapter contains a collection of API building blocks
+that have proven there worth over time.
+
+TODO
+
+### Immutables
+
+### Naming
+
+### Errors
+
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
+[CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
+[CCBYSA3]: https://creativecommons.org/licenses/by-sa/3.0/deed.en
 [go]: https://github.com/golang/go
 [gocompat]: https://golang.org/doc/go1compat
 [gospec]: https://golang.org/ref/spec
@@ -217,3 +275,6 @@ TODO
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [sv]: http://semver.org/
+[ua]: https://commons.wikimedia.org/wiki/User:Cccefalon/Profile
+[wab]: https://en.wikipedia.org/wiki/William-Adolphe_Bouguereau
+[zf]: https://commons.wikimedia.org/wiki/User_talk:ZooFari
