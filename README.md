@@ -35,9 +35,8 @@ Let's start with the basic stuff. The rules never to be broken.
 The rules we can't even argue with, but that we still need
 to be reminded of, becuase we occasionally forget about them.
 
-### 1. Tell me what this thing is!
 
-#### The README file
+### 1. Tell me what this thing is!
 
 > A software repository should have a `README` file,
 > and this file should say what the project *is about*.
@@ -53,13 +52,14 @@ and attempt to implement a small library as best I can.
 Take a look, and don't hesitate to open an issue
 if the purpose of the library is unclear.
 
-### 2. Tell me what the code does!
+
+### 2. Tell me what it does!
 
 > An API should say what the code *does*.
 
-If a potential user gets past the README file, and dives into the
-[fenwick doc][fenwickDOC], she probably wants the full story.
-Telling it three times is often a good approach.
+If a potential user gets past the README file, and dives into
+the [fenwick documentation][fenwickDOC], she probably wants
+the full story. Telling it three times is often a good approach.
 
 First a short sentence stating the purpose of the package.
 
@@ -99,7 +99,7 @@ the implementation details completely, even though I tried:
   the job of a list, even though it's implemented as a tree.
   I surely got that right.
  
-- The cheesy stock picture in the README file depicts a list, not a tree.
+- The cheesy stock photo in the README file depicts a list, not a tree.
   Perhaps I got that right.
 
 - The data structure is known as a Fenwick tree, or binary indexed tree.
@@ -119,10 +119,34 @@ This has two major benefits:
 That's a nice place to be in.
 
 
+### 4. Grant me the right to use it!
+
+> Every public software project should have a license.
+
+I'm not a lawyer, but it's my understanding that code without
+a license can be legally used only by its author.
+
+If your're looking for paying customers, you may want to seek
+legal advice on licensing. However, to turn your project into
+free and open-source software is easy: just put the proper
+license text in the right places.
+
+I like the [BSD 2-Clause License][BSD2]. Not only does it offer
+the permissions, conditions and limitations that I want:
+
+- Permissions: private and commercial use, modification, distribution.
+- Conditions: license and copyright notice.
+- Limitations: liablility and warranty.
+
+It's also easy to apply: you add a single file to the top
+directory of your repo.
+
+
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
 *This text is licensed under a [CC BY 3.0 License][CCBY30]*
 
+[BSD2]: https://opensource.org/licenses/BSD-2-Clause
 [CCBY30]: https://creativecommons.org/licenses/by/3.0/
 [gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
