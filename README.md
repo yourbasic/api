@@ -33,7 +33,7 @@ deserve to be known as **The 5 Commandments**.
 
 Let's start with the basic stuff. The rules never to be broken.
 The rules that we don't need to argue about, but that we still
-need to be reminded of, becuase we often forget about them.
+need to be reminded of, because we often forget about them.
 
 
 ### 1. Tell me what this thing is
@@ -90,7 +90,7 @@ And finally, the nitty-gritty for those who want to know it all.
 
 ### 3. Don't tell me how it works
 
-> If at all possible, an API **shouldn't** reveal any implemenatation details.
+> If at all possible, an API **shouldn't** reveal any implementation details.
 
 Threading and garbage collection in Go are two great examples of interfaces
 that get this right. In general, a Go programmer doesn't have to,
@@ -118,7 +118,7 @@ This has two major benefits:
 - The library should be fairly easy to use. If you know what a list is,
   you're ready to go.
 - There is plenty of room for improving and modifying the implementation
-  without breaking backwards compatability.
+  without breaking backwards compatibility.
   
 That's a nice place to be in.
 
@@ -130,7 +130,7 @@ That's a nice place to be in.
 I'm not a lawyer and this is not legal advice, but it's my understanding
 that code without a license can only be legally used by its author.
 
-If your're looking for paying customers, you may want to seek
+If you're looking for paying customers, you may want to seek
 actual legal advice on licensing. However, to turn your project into
 free and open-source software is easy: just put the proper
 license text in the right places.
@@ -140,7 +140,7 @@ the permissions, conditions and limitations that I want:
 
 - Permissions: private and commercial use, modification, distribution.
 - Conditions: license and copyright notice.
-- Limitations: liablility and warranty.
+- Limitations: liability and warranty.
 
 It's also easy to apply: you add a single file to the top
 directory of your repo.
@@ -150,7 +150,7 @@ directory of your repo.
 
 > A software library needs to be backwards compatible.
 > It's fine to improve the documentation, change the implementation,
-> and even introduce new features. But, if at all possibe,
+> and even introduce new features. But, if at all possible,
 > **don't change the API**.
 
 This is the tough one. There are two major challenges here:
@@ -161,7 +161,7 @@ This is the tough one. There are two major challenges here:
 
 It's not enough to just follow this rule, you also need to say that
 you are doing so. As a library provider you're in the business of trust.
-This is why your library needs to explain its compatability policy,
+This is why your library needs to explain its compatibility policy,
 and why you should consider using semantic versioning.
 
 
@@ -194,7 +194,7 @@ using a three-part version number: `major.minor.patch`. You increment
 
 The semantic versioning specification itself currently sits at version
 number `2.0.0`. This means that it broke  the fifth commandment,
-and that no new featues or patches have been introduced since then.
+and that no new features or patches have been introduced since then.
 Even so, it's a good convention to follow. And, once again,
 the Go project gets it right.
 
@@ -205,7 +205,7 @@ the Go project gets it right.
 
 *Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
 
-Even though API design often requires us to make diffcult trade-offs,
+Even though API design often requires us to make difficult trade-offs,
 a simpler API is almost always a better API.
 
 TODO:
