@@ -29,11 +29,11 @@ some strategies and rules that could help us create code libraries
 that are safe, efficient and easy to use.
 
 
-## Basics
+## The 5 commandments
 
 Let's start with the basic stuff. The rules never to be broken.
-The rules we can't even argue with, but that we still need
-to be reminded of, becuase we occasionally forget about them.
+The rules that we don't need to argue about, but that we still
+need to be reminded of, becuase we often forget about them.
 
 
 ### 1. Tell me what this thing is
