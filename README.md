@@ -54,13 +54,14 @@ In the [Fenwick repo][fenwick] I stick my neck out and try to
 implement a small library that follows the commandments.
 Its README file starts out like this:
 
-    # Your basic Bloom filter
+    # Your basic Fenwick tree
+    
+    ### Golang list data structure supporting prefix sums
+    
+    A Fenwick tree, or binary indexed tree, is a space-efficient
+    list data structure that can efficiently update elements and
+    calculate prefix sums in a list of numbers.
 
-    ### Golang probabilistic set data structure
-
-    A Bloom filter is a fast and space-efficient probabilistic
-    data structure used to test set membership. A membership test
-    returns either ”likely member” or ”definitely not a member”.
 
 ### 2. Tell me what it does
 
@@ -130,7 +131,7 @@ That's a nice place to be in.
 > Every public software project needs a license.
 
 I'm not a lawyer, but it's my understanding that code without
-a license can be legally used only by its author.
+a license can only be legally used by its author.
 
 If your're looking for paying customers, you may want to seek
 proper legal advice on licensing. However, to turn your project into
@@ -144,7 +145,7 @@ the permissions, conditions and limitations that I want:
 - Conditions: license and copyright notice.
 - Limitations: liablility and warranty.
 
-It's also easy to apply: you add a [single file][FenwickLICENSE] to the top
+It's also easy to apply: you add a single file to the top
 directory of your repo.
 
 
@@ -163,10 +164,10 @@ This is the tough one. There are two major challenges here:
 
 It's not enough to just follow this rule, you also need to say that
 you are doing so. As a library provider you're in the business of trust.
-This is why your library needs to explain its compatability policies,
+This is why your library needs to explain its compatability policy,
 and why you should consider using semantic versioning.
 
-#### Compatibility policies
+#### Compatibility policy
 
 Fenwick's compatibility policy is very simple, but still explicitly stated:
 
@@ -179,7 +180,7 @@ Fenwick's compatibility policy is very simple, but still explicitly stated:
     is to handle issues that can't be resolved in any other
     reasonable way.
 
-[Go 1 and the Future of Go Programs][gocompat] is an example of a complex
+[Go 1 and the Future of Go Programs][gocompat] is a of a complex
 and detailed compatibility document. It's required study for anyone
 working with large-scale library design and maintenance.
 
@@ -196,7 +197,8 @@ using a three-part version number: `major.minor.patch`. You increment
 The semantic versioning specification itself currently sits at version
 number `2.0.0`. This means that it broke  the fifth commandment,
 and that no new featues or patches have been introduced since then.
-Even so, it is a good convention to follow.
+Even so, it is a good convention to follow. And, once again,
+the Go project gets it right.
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
