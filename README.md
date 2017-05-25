@@ -218,12 +218,13 @@ Packages should be atomic, independent and composable.
 
 #### Composable
 
+
 ### Math is simple
 
 If you can model your API on a mathematical abstraction, such as a set
 or an interval, you're almost home free.
 
-### Consistent is simple
+### Keep it consistent
 
 
 # Don't rush it
@@ -255,11 +256,17 @@ that have proven there worth over time.
 
 TODO
 
+### Functions that need little and give much
+
+### Interfaces
+
 ### Immutables
 
-### Naming
+### Names
 
 ### Errors
+
+### Examples
 
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
