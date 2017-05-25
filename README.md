@@ -1,15 +1,22 @@
 # Your basic API
 
-### Thoughts on good API design
+## Thoughts on good API design
 
-This text will contain thoughts on good API design.
+The aim of this text is to explore API design and try to find
+strategies and rules that could help us create code libraries
+that are safe, efficient and easy to use.
+
+Even though API design is as much an art as a science, there still
+are some fundamental rules that you should be aware of. Rules that
+will costly you dearly if you break them. Enough so that they
+deserve to be known as **The 5 Commandments**.
 
 
 ## Go, go and garbage
 
 ![go](go.jpg)
 
-Most examples in this text will be written in Go, the language itself
+The examples in this text are written in Go, the language itself
 being an outstanding example of good API design, with clean and simple
 interfaces on top of a huge and complex implementation.
 
@@ -19,17 +26,13 @@ be simpler and the semantics are explained in
 in the language specification. Still, you rarely hear complaints
 about thread support being limited in Go.
 
-Garbage collection is another remarkable example.
+Garbage collection in Go is another remarkable example.
 The implementation is hideously complicated, while the API
 is null and void: there is no syntax and the language specification
-doesn't even mention the concept explicitly.
-
-The aim of this text is to explore API design and try to find
-some strategies and rules that could help us create code libraries
-that are safe, efficient and easy to use.
+doesn't even mention the concept explicitly. It just works.
 
 
-## The 5 commandments
+## The 5 Commandments
 
 Let's start with the basic stuff. The rules never to be broken.
 The rules that we don't need to argue about, but that we still
@@ -47,8 +50,8 @@ Still, it's not uncommon to see README files that starts with
 "Candide now supports the Pangloss 3.2 file format"
 but never tells what Candide is and what it has to offer.
 
-In the [Fenwick repo][fenwick] I stick my neck out and implement
-a small library that tries to follow the 5 commandments.
+In the [Fenwick repo][fenwick] I stick my neck out and try to
+implement a small library that follows the commandments.
 Its README file starts out like this:
 
     # Your basic Bloom filter
@@ -77,8 +80,7 @@ Then a slightly longer explanation.
     list data structure that can efficiently update elements and
     calculate prefix sums in a list of numbers.
     
-And finally, all the nitty-gritty details for those who intend to
-acually use the code.
+And finally, the nitty-gritty for those who want to know it all.
 
     Compared to a common array, a Fenwick tree achieves better
     balance between element update and prefix sum calculation –
@@ -95,22 +97,21 @@ acually use the code.
 Threading and garbage collection in Go are two great examples of interfaces
 that get this right. In general, a Go programmer doesn't have to,
 and doesn't want to, worry about the intricacies of garbage collection
-and threading. "It just works."
+and threading. It just works.
 
 In the [Fenwick repo][fenwick] I didn't manage to hide
 the implementation details completely, even though I tried:
 
 - The data type is called `List`, not `Tree`. That's because it **does**
   the job of a list, even though it's implemented as a tree.
-  I surely got that right.
+  I surely got that one right.
  
 - The cheesy stock photo in the README file depicts a list, not a tree.
   Perhaps I got that right.
 
 - The data structure is known as a Fenwick tree, or binary indexed tree.
-  I couldn't change that. But it was my decision to include a few
-  implementation details at the very end of the package documentation.
-  Sorry about that.
+  That wasn't my choice, but I'm the one who included some implementation
+  details at the end of the package documentation. Sorry about that.
   
 However, the documentation of the `fenwick.List`data type and its methods
 describes what the code does without telling anything about how it works.
@@ -132,7 +133,7 @@ I'm not a lawyer, but it's my understanding that code without
 a license can be legally used only by its author.
 
 If your're looking for paying customers, you may want to seek
-legal advice on licensing. However, to turn your project into
+proper legal advice on licensing. However, to turn your project into
 free and open-source software is easy: just put the proper
 license text in the right places.
 
@@ -143,7 +144,7 @@ the permissions, conditions and limitations that I want:
 - Conditions: license and copyright notice.
 - Limitations: liablility and warranty.
 
-It's also easy to apply: you add a single file to the top
+It's also easy to apply: you add a [single file][FenwickLICENSE] to the top
 directory of your repo.
 
 
@@ -154,7 +155,7 @@ directory of your repo.
 > and even introduce new features. But, if at all possibe,
 > **don't change the behavior**.
 
-This is the tough one. There are two major problems here:
+This is the tough one. There are two major challenges here:
 
 - If you break this rule, you will break other people's code.
 - You need to get your API right at the very first attempt.
@@ -163,20 +164,39 @@ This is the tough one. There are two major problems here:
 It's not enough to just follow this rule, you also need to say that
 you are doing so. As a library provider you're in the business of trust.
 This is why your library needs to explain its compatability policies,
-and why it should use semantic versioning.
+and why you should consider using semantic versioning.
 
 #### Compatibility policies
 
-TODO: Use Fenwick as a simple example and Go 1 as an advanced example.
+Fenwick's compatibility policy is very simple, but still explicitly stated:
 
-[Go 1 and the Future of Go Programs][gocompat]
+    ### Roadmap
+    
+    * The API of this library is frozen.
+    * Version numbers adhere to semantic versioning.
+    
+    The only accepted reason to modify the API of this package
+    is to handle issues that can't be resolved in any other
+    reasonable way.
+
+[Go 1 and the Future of Go Programs][gocompat] is an example of a complex
+and detailed compatibility document. It's required study for anyone
+working with large-scale library design and maintenance.
 
 #### Semantic versioning
 
-TODO: Briefly explain semantic versioning.
 
-[Semantic Versioning 2.0.0][sv]
+[Semantic versioning][sv] is a convention for specifying compatibility
+using a three-part version number: `major.minor.patch`. You increment
 
+- `major` when you make incompatible API changes,
+- `minor` when you add functionality in a backwards-compatible manner, and
+- `patch` when you make backwards-compatible bug fixes.
+
+The semantic versioning specification itself currently sits at version
+number `2.0.0`. This means that it broke  the fifth commandment,
+and that no new featues or patches have been introduced since then.
+Even so, it is a good convention to follow.
 
 #### Stefan Nilsson – [korthaj](https://github.com/korthaj)
 
@@ -184,6 +204,7 @@ TODO: Briefly explain semantic versioning.
 [gocompat]: https://golang.org/doc/go1compat
 [gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
+[fenwickLICENSE]: https://github.com/yourbasic/fenwick/blob/master/LICENSE
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [sv]: http://semver.org/
