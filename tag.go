@@ -1,2 +1,2 @@
-// Package api is currently an empty go library.
+// Package api is an empty go library.
 package api
