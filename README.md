@@ -269,8 +269,23 @@ TODO: *Add a positive example here*
 
 ### Just say no
 
-TODO: Add example of an API that can lead to bad designs:
-`public void add(int index, E element)` in `ArrayList` comes to mind.
+> An API shouldn't encourage bad design decisions.
+
+The `add` method in Java's `ArrayList` comes to mind:
+
+    public void add(int index, E element)
+    
+    Inserts the specified element at the specified position in this list.
+    Shifts the element currently at that position (if any) and any subsequent
+    elements to the right (adds one to their indices).
+
+This method makes it easy to do the wrong thing. Adding a new element
+to the middle of an array is really inefficient; something you should
+typically avoid. That's what hash tables are for.
+
+I know that it can be difficult to say no when the kids are throwing
+a tantrum, but remember the fifth commandment. You might be able to beat
+your candy addiction, but you don't get to remove anything from an API.
 
 
 ### Math is simple
