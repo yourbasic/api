@@ -12,7 +12,7 @@ There will be many examples in [Go][go], the language itself being
 an outstanding case study of good API design, with many clean
 and simple interfaces on top of a huge complex implementation.
 There will also be some examples in [Java][java], a language
-that has had much more time to accumulate cruft in the form of
+that has had more time to accumulate cruft in the form of
 superfluous and dysfunctional elements.
 
 The `go` keyword is particularly striking: the syntax couldn't
@@ -269,14 +269,21 @@ TODO: *It's about time to look at a positive example*
 
 ### Math is simple
 
+> If people do not believe that mathematics is simple,
+> it is only because they do not realize how complicated life is.
+
+*John von Neumann*
+
 If you can model your API on a mathematical abstraction, such as a set
-or an interval, you're almost home free.
+or an interval, you're almost home free. Mathematical abstractions tend
+to be atomic, well-specified, independent, composable entities with
+a long story of use, abuse and improvements along the way.
 
 TODO: *Add example*
 
 ### Keep it consistent
 
-> Si fueris Romae, Romano vivito more.
+> si fueris Romae, Romano vivito more
 
 When in Rome, do as the Romans do.
 In Java it's `toString`, `equals`, and `size`;
