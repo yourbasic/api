@@ -274,12 +274,26 @@ TODO: *It's about time to look at a positive example*
 
 *John von Neumann*
 
-If you can model your API on a mathematical abstraction, such as a set
-or an interval, you're almost home free. Mathematical abstractions tend
-to be atomic, well-specified, independent, composable entities with
-a long story of use, abuse and improvements along the way.
+If you can model your API on a mathematical abstraction,
+such as a set or an interval, you're almost home free.
+Mathematical abstractions tend to be atomic, well-specified,
+independent, composable entities with a long story of use,
+abuse and improvements along the way.
 
-TODO: *Add example*
+Take a look at [VertexSet][VertexSet], a datastructure that
+keeps track of a group of vertices in a Go graph package.
+There are three mathematical abstractions here:
+
+- the vertices themselves are identified by **integers**,
+- a group of vertices is a **set** with **union**, **intersection**,
+  **set difference** and **membership** operations, and
+- the constructor takes an **interval** as input.
+
+There are two main reasons why I ended up with this API design.
+First, I believe that these operations are useful, necessary
+and sufficient. Secondly, they favor designs that can be
+efficiently implemented in this particular package.
+
 
 ### Keep it consistent
 
@@ -348,5 +362,6 @@ TODO:
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [sv]: http://semver.org/
 [ua]: https://commons.wikimedia.org/wiki/User:Cccefalon/Profile
+[VertexSet]: https://godoc.org/github.com/yourbasic/graph/build#VertexSet
 [wab]: https://en.wikipedia.org/wiki/William-Adolphe_Bouguereau
 [zf]: https://commons.wikimedia.org/wiki/User_talk:ZooFari
