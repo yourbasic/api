@@ -8,9 +8,12 @@ that are safe, efficient and easy to use.
 
 ![go](go.jpg)
 
-The examples are written in [Go][go], the language itself being
-an outstanding example of good API design, with clean and simple
-interfaces on top of a huge complex implementation.
+There will be many examples in [Go][go], the language itself being
+an outstanding case study of good API design, with many clean
+and simple interfaces on top of a huge complex implementation.
+There will also be some examples in [Java][java], a language
+that has had much more time to accumulate cruft in the form of
+superfluous and dysfunctional elements.
 
 The `go` keyword is particularly striking: the syntax couldn't
 be simpler and the semantics are explained in
@@ -217,22 +220,51 @@ the Go project gets it right.
 
 # Keep it simple
 
+Even though API design often requires us to make difficult trade-offs,
+a simpler API is almost always a better API.
+
+### Don't use a lot where a little will do
+
+    To paint a little thing like that you smeared 
+    Carelessly passing with your robes afloat, — 
+    Yet do much less, so much less, Someone says, 
+    (I know his name, no matter) — so much less! 
+    Well, less is more, Lucrezia: I am judged. 
+
+*From Andrea del Sarto by Robert Browning, 1855.*
+
+TODO: *Add example: The Java io/nio API is so big as to make it almost unusable.*
+
+#### Don't use complicated constructs where simple ones will do
+
+TODO: *Compare function/class, composition/inheritance.*
+
+
+### One package, one idea
+
 ![scissors](scissors.png)
 
 *Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
 
-Even though API design often requires us to make difficult trade-offs,
-a simpler API is almost always a better API.
+Chances are that you have never used the Java `Vector` class.
+It was superceded by `ArrayList` already in Java 1.2.
+The problem with `Vector` is that it does **two things**:
 
-TODO:
+1. it's a synchronized datastructure, and
+2. it's a list.
 
-Packages should be atomic, independent and composable.
+Both of these things are highly useful, but most of the time
+you only want one of them.
 
-#### Atomic
+There is nothing wrong with putting a lot of good stuff in you library.
+The trick is to come up with suitable units
+(classes or packages):
 
-#### Independent
+- units that do one well-specified thing,
+- are independent of each other, and
+- can be easily composed.
 
-#### Composable
+TODO: *It's about time to look at a positive example*
 
 
 ### Math is simple
@@ -240,7 +272,16 @@ Packages should be atomic, independent and composable.
 If you can model your API on a mathematical abstraction, such as a set
 or an interval, you're almost home free.
 
+TODO: *Add example*
+
 ### Keep it consistent
+
+> Si fueris Romae, Romano vivito more.
+
+When in Rome, do as the Romans do.
+In Java it's `toString`, `equals`, and `size`;
+in Go it's `String`, `Equal`, and `Len`.
+Suck it up, and get it right.
 
 
 # Don't rush it
@@ -290,12 +331,13 @@ TODO:
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
 [CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
 [CCBYSA3]: https://creativecommons.org/licenses/by-sa/3.0/deed.en
-[go]: https://github.com/golang/go
+[go]: https://en.wikipedia.org/wiki/Go_(programming_language)
 [gocompat]: https://golang.org/doc/go1compat
 [gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
 [fenwickLICENSE]: https://github.com/yourbasic/fenwick/blob/master/LICENSE
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
+[java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [sv]: http://semver.org/
 [ua]: https://commons.wikimedia.org/wiki/User:Cccefalon/Profile
