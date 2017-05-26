@@ -293,10 +293,11 @@ IO library at this point. After all, such a library must support
 low-level operations on many diverse platforms. But please, don't
 add more fuel to the fire.
 
-The Go `io` package is a new fresh start. The library does take some
-getting used to, but it's small and manageable. Unfortunately, no amount
-of API design can fully protect us from the thorny history of file systems
-and fleeting memory technologies.
+The Go `io` package is a new fresh start. The library takes some
+getting used to but it's small and manageable, and handles the most
+common use cases well. Unfortunately, no amount of API design can
+fully protect us from the thorny history of file systems and
+fleeting memory technologies.
 
 
 ### One package, one idea
