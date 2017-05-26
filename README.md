@@ -259,7 +259,40 @@ and fleeting memory technologies.
 
 ### Don't use complicated constructs where simple ones will do
 
-TODO: *Compare function/class, composition/inheritance.*
+#### Functions
+
+A function is a simple beautiful thing. It's easy to understand,
+easy to test, and it doesn't come with any hidden dependencies
+or side effects. And, perhaps most importantly, functions can
+be freely composed. The better part of mathematics is built from functions.
+If you can find a nice design using functions only, good for you.
+
+(I'm talking about pure functions here, the one that always produce
+the same output given the same input; not the ones that output
+the time of day or some other nasty surprise.)
+
+#### Java detour
+
+The `static` keyword in Java has a bad reputation. Probably because
+it has so many different meanings. A `static class` is a collection
+of global variables, and you typically want to avoid that.
+A `static method`, however, is Java's convoluted way to declare
+a pure function. This is a case where Java makes you jump through
+hoops to do the right thing. Functions are great also for Java
+programmers. Don't be afraid to use them.
+
+#### Objects
+
+A `struct` isn't quite as simple and beautiful as a function,
+but it has memory. Many elegant and powerful abstractions consist
+of a single `struct` with a set of attached methods. In fact,
+at the core this is what object orientation is all about.
+The rest is just bells and whistles.
+
+#### Inheritance
+
+Inheritance is pretty ugly. The older I get, the more seldom I feel
+the need to use it. There are simpler and safer ways to design software.
 
 
 ### One package, one idea
@@ -359,8 +392,6 @@ Suck it up, and get it right.
 The only sure-fire way to know if an API works as intended
 is to use it over an extended period of time on different
 types of tasks and projects.
-
-TODO:
 
 > To be a good API designer you will have to prepare and eat
 > your own dog food until you like it.
