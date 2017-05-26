@@ -264,7 +264,13 @@ The trick is to come up with suitable units
 - are independent of each other, and
 - can be easily composed.
 
-TODO: *It's about time to look at a positive example*
+TODO: *Add a positive example here*
+
+
+### Just say no
+
+TODO: Add example of an API that can lead to bad designs:
+`public void add(int index, E element)` in `ArrayList` comes to mind.
 
 
 ### Math is simple
