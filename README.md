@@ -6,7 +6,7 @@ The aim of this text is to explore API design and try to find
 strategies and rules that can help us create code libraries
 that are safe, efficient and easy to use.
 
-![go](go.jpg)
+![go](res/go.jpg)
 
 There will be many examples in [Go][go], the language itself being
 an outstanding case study of good API design, with many clean
@@ -297,7 +297,7 @@ and fleeting memory technologies.
 
 ### One package, one idea
 
-![scissors](scissors.png)
+![scissors](res/scissors.png)
 
 *Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
 
@@ -373,7 +373,7 @@ efficiently implemented in this particular package.
 
 # Don't rush it
 
-![rest](rest.jpg)
+![rest](res/rest.jpg)
 
 *Rest at harvest, painting by [William-Adolphe Bouguereau][wab], public domain.*
 
@@ -387,7 +387,7 @@ types of tasks and projects.
 
 # Tools of the trade
 
-![tool](tool.jpg)
+![tool](res/tool.jpg)
 
 *Hobel mit Spänen und Zimmermannsbleistift, image by [Uwe Aranas][ua], [CC BY-SA 3.0][CCBYSA3].*
 
