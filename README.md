@@ -46,13 +46,13 @@ need to be reminded of, because we often forget about them.
 > Preferably in the very first sentence.
 
 If people don't know what it is, they can't use it, duh.
-Still, it's not uncommon to see README files that starts with
+Still, it's not uncommon to see `README` files that starts with
 "Candide now supports the Pangloss 3.2 file format"
 but never tells what Candide is and what it has to offer.
 
 In the [Fenwick repo][fenwick] I stick my neck out and try to
 implement a small library that follows the commandments.
-Its README file starts out like this:
+Its `README` file starts out like this:
 
     # Your basic Fenwick tree
     
@@ -67,7 +67,7 @@ Its README file starts out like this:
 
 > An API should say what the code **does**.
 
-If a potential user gets past the README file, and dives into
+If a potential user gets past the `README` file, and dives into
 the [Fenwick documentation][fenwickDOC], she probably wants
 the full story. Telling it three times is often a good approach.
 
@@ -123,7 +123,7 @@ the implementation details completely, even though I tried:
   the job of a list, even though it's implemented as a tree.
   I surely got that one right.
  
-- The cheesy stock photo in the README file depicts a list, not a tree.
+- The cheesy stock photo in the `README` file depicts a list, not a tree.
   Perhaps I got that right.
 
 - The data structure is known as a Fenwick tree, or binary indexed tree.
@@ -228,11 +228,12 @@ a simpler API is almost always a better API.
 
 #### Functions
 
-A function is a simple beautiful thing. It's easy to understand,
-easy to test, and it doesn't come with any hidden dependencies
-or side effects. And, perhaps most importantly, functions can
-be freely composed. The better part of mathematics is built from functions.
-If you can find a nice design using functions only, good for you.
+A function is a simple and beautiful thing. It's easy to use,
+easy to understand, easy to test, and it doesn't come with any
+hidden dependencies or side effects. And, perhaps most importantly,
+functions can be freely composed. The better part of mathematics
+is built from functions. If you can find a nice design using
+functions only, good for you.
 
 (I'm talking about pure functions here, the one that always produce
 the same output given the same input; not the ones that output
@@ -241,20 +242,23 @@ the time of day or some other nasty surprise.)
 #### Java detour
 
 The `static` keyword in Java has a bad reputation. Probably because
-it has so many different meanings. A `static class` is a collection
-of global variables, and you typically want to avoid that.
-A `static method`, however, is Java's convoluted way to declare
+it has so many different meanings. A static class is a collection of
+global variables, and you typically want to avoid that. (This doesn't
+apply to static nested classes, but let's not go there. This chapter
+is about simplicity.)
+
+A static method, however, is Java's twisted way to declare
 a pure function. This is a case where Java makes you jump through
 hoops to do the right thing. Functions are great also for Java
 programmers. Don't be afraid to use them.
 
 #### Objects
 
-A `struct` isn't quite as simple and beautiful as a function,
-but it has memory. Many elegant and powerful abstractions consist
-of a single `struct` with a set of attached methods. In fact,
-at the core this is what object orientation is all about.
-The rest is just bells and whistles.
+An object, or `struct` if you like, isn't quite as simple and
+beautiful as a function, but it has memory. Many elegant and
+powerful abstractions consist of a single object with a set of
+attached methods. In fact, at the core this is what object orientation
+is all about. The rest is just bells and whistles.
 
 #### Inheritance
 
