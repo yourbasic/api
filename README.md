@@ -362,7 +362,7 @@ independent, composable entities with a long story of use,
 abuse and improvements along the way.
 
 Take a look at [VertexSet][VertexSet], a data structure that
-keeps track of a group of vertices in a graph package.
+keeps track of a group of vertices in a graph.
 There are three mathematical abstractions here:
 
 - the vertices themselves are identified by **integers**,
