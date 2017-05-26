@@ -223,6 +223,7 @@ the Go project gets it right.
 Even though API design often requires us to make difficult trade-offs,
 a simpler API is almost always a better API.
 
+
 ### Don't use a lot where a little will do
 
     To paint a little thing like that you smeared 
@@ -233,9 +234,30 @@ a simpler API is almost always a better API.
 
 *From Andrea del Sarto by Robert Browning, 1855.*
 
-TODO: *Add example: The Java io/nio API is so big as to make it almost unusable.*
+Adding to Browning's advice would be a mistake. Instead, a war story:
 
-#### Don't use complicated constructs where simple ones will do
+The Java `io` and `nio` packages are humongous — and incompatible.
+In fact, they are so big that many of us end up at [Stack Overflow][so]
+trying to get those pesky bytes from a file into our Java program.
+Unfortunately, most of the brave souls who share Java code snippets
+on Stack Overflow also didn't read the full spec, and got it wrong.
+
+For many years I didn't know that my Java programs used the platform
+default character encoding. That's an ugly bug, and I'm not the only
+one to have fallen into this trap.
+
+There probably is no way to design a really good general-purpose
+IO library at this point. After all, such a library must support
+low-level operations on many diverse platforms. But please, don't
+add more fuel to the fire.
+
+The Go `io` package is a new fresh start. The library does take some
+getting used to, but it's small and manageable. Unfortunately, no amount
+of API design can fully protect us from the thorny history of file systems
+and fleeting memory technologies.
+
+
+### Don't use complicated constructs where simple ones will do
 
 TODO: *Compare function/class, composition/inheritance.*
 
@@ -271,7 +293,7 @@ TODO: *Add a positive example here*
 
 > An API shouldn't encourage bad design decisions.
 
-The `add` method in Java's `ArrayList` comes to mind:
+The `add` method in Java's `ArrayList` is a clearcut example:
 
     public void add(int index, E element)
     
@@ -281,28 +303,30 @@ The `add` method in Java's `ArrayList` comes to mind:
 
 This method makes it easy to do the wrong thing. Adding a new element
 to the middle of an array is really inefficient; something you should
-typically avoid. That's what hash tables are for.
+typically avoid. That's what we have hash tables for.
 
 I know that it can be difficult to say no when the kids are throwing
-a tantrum, but remember the fifth commandment. You might be able to beat
-your candy addiction, but you don't get to remove anything from an API.
+a tantrum, but remember the fifth commandment – the one that says that
+a software library needs to be backwards compatible. You might be able
+to beat your candy addiction, but you don't get to remove anything
+from an API.
 
 
 ### Math is simple
 
-> If people do not believe that mathematics is simple,
-> it is only because they do not realize how complicated life is.
+> If people do not believe that mathematics is simple, it is only
+> because they do not realize how complicated life is.
 
 *John von Neumann*
 
 If you can model your API on a mathematical abstraction,
-such as a set or an interval, you're almost home free.
+such as a set or an interval, you're home free.
 Mathematical abstractions tend to be atomic, well-specified,
 independent, composable entities with a long story of use,
 abuse and improvements along the way.
 
 Take a look at [VertexSet][VertexSet], a datastructure that
-keeps track of a group of vertices in a Go graph package.
+keeps track of a group of vertices in a graph package.
 There are three mathematical abstractions here:
 
 - the vertices themselves are identified by **integers**,
@@ -311,7 +335,7 @@ There are three mathematical abstractions here:
 - the constructor takes an **interval** as input.
 
 There are two main reasons why I ended up with this API design.
-First, I believe that these operations are useful, necessary
+First, I believe that the included operations are useful, necessary
 and sufficient. Secondly, they favor designs that can be
 efficiently implemented in this particular package.
 
@@ -368,7 +392,7 @@ TODO:
 ### Examples
 
 
-#### Stefan Nilsson – [korthaj](https://github.com/korthaj)
+#### Stefan Nilsson — [korthaj](https://github.com/korthaj)
 
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
 [CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
@@ -381,6 +405,7 @@ TODO:
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
+[so]: https://stackoverflow.com/
 [sv]: http://semver.org/
 [ua]: https://commons.wikimedia.org/wiki/User:Cccefalon/Profile
 [VertexSet]: https://godoc.org/github.com/yourbasic/graph/build#VertexSet
