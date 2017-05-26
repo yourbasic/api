@@ -371,16 +371,6 @@ and sufficient. Secondly, they favor designs that can be
 efficiently implemented in this particular package.
 
 
-### Keep it consistent
-
-> si fueris Romae, Romano vivito more
-
-When in Rome, do as the Romans do.
-In Java it's `toString`, `equals`, and `size`;
-in Go it's `String`, `Equal`, and `Len`.
-Suck it up, and get it right.
-
-
 # Don't rush it
 
 ![rest](rest.jpg)
@@ -406,6 +396,14 @@ are built by putting together the right bits and pieces.
 This chapter contains a collection of API building blocks
 that have proven there worth over time.
 
+### Keep it consistent
+
+> si fueris Romae, Romano vivito more
+
+When in Rome, do as the Romans do.
+In Java it's `toString`, `equals`, and `size`;
+in Go it's `String`, `Equal`, and `Len`.
+Suck it up, and get it right.
 
 ### Functions that need little and give much
 
