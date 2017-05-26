@@ -235,7 +235,7 @@ functions can be freely composed. The better part of mathematics
 is built from functions. If you can find a nice design using
 functions only, good for you.
 
-(I'm talking about pure functions here, the one that always produce
+(I'm talking about pure functions here, the ones that always produce
 the same output given the same input; not the ones that output
 the time of day or some other nasty surprise.)
 
