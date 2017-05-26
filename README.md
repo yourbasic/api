@@ -224,39 +224,6 @@ Even though API design often requires us to make difficult trade-offs,
 a simpler API is almost always a better API.
 
 
-### Don't use a lot where a little will do
-
-    To paint a little thing like that you smeared 
-    Carelessly passing with your robes afloat, — 
-    Yet do much less, so much less, Someone says, 
-    (I know his name, no matter) — so much less! 
-    Well, less is more, Lucrezia: I am judged. 
-
-*From Andrea del Sarto by Robert Browning, 1855.*
-
-Adding to Browning's advice would be a mistake. Instead, a war story:
-
-The Java `io` and `nio` packages are humongous — and incompatible.
-In fact, they are so big that many of us end up at [Stack Overflow][so]
-trying to get those pesky bytes from a file into our Java program.
-Unfortunately, most of the brave souls who share Java code snippets
-on Stack Overflow also didn't read the full spec, and got it wrong.
-
-For many years I didn't know that my Java programs used the platform
-default character encoding. That's an ugly bug, and I'm not the only
-one to have fallen into this trap.
-
-There probably is no way to design a really good general-purpose
-IO library at this point. After all, such a library must support
-low-level operations on many diverse platforms. But please, don't
-add more fuel to the fire.
-
-The Go `io` package is a new fresh start. The library does take some
-getting used to, but it's small and manageable. Unfortunately, no amount
-of API design can fully protect us from the thorny history of file systems
-and fleeting memory technologies.
-
-
 ### Don't use complicated constructs where simple ones will do
 
 #### Functions
@@ -291,8 +258,41 @@ The rest is just bells and whistles.
 
 #### Inheritance
 
-Inheritance is pretty ugly. The older I get, the more seldom I feel
+Inheritance is pretty complicated. The older I get, the more seldom I feel
 the need to use it. There are simpler and safer ways to design software.
+
+
+### Don't use a lot where a little will do
+
+    To paint a little thing like that you smeared 
+    Carelessly passing with your robes afloat, — 
+    Yet do much less, so much less, Someone says, 
+    (I know his name, no matter) — so much less! 
+    Well, less is more, Lucrezia: I am judged. 
+
+*From Andrea del Sarto by Robert Browning, 1855.*
+
+Adding to Browning's advice would be a mistake. Instead, a war story:
+
+The Java `io` and `nio` packages are humongous — and incompatible.
+In fact, they are so big that many of us end up at [Stack Overflow][so]
+trying to get those pesky bytes from a file into our Java program.
+Unfortunately, most of the brave souls who share Java code snippets
+on Stack Overflow also didn't read the full spec, and got it wrong.
+
+For many years I didn't know that my Java programs used the platform
+default character encoding. That's an ugly bug, and I'm not the only
+one to have fallen into this trap.
+
+There probably is no way to design a really good general-purpose
+IO library at this point. After all, such a library must support
+low-level operations on many diverse platforms. But please, don't
+add more fuel to the fire.
+
+The Go `io` package is a new fresh start. The library does take some
+getting used to, but it's small and manageable. Unfortunately, no amount
+of API design can fully protect us from the thorny history of file systems
+and fleeting memory technologies.
 
 
 ### One package, one idea
@@ -302,10 +302,10 @@ the need to use it. There are simpler and safer ways to design software.
 *Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
 
 Chances are that you have never used the Java `Vector` class.
-It was superceded by `ArrayList` already in Java 1.2.
+It was superseded by `ArrayList` already in Java 1.2.
 The problem with `Vector` is that it does **two things**:
 
-1. it's a synchronized datastructure, and
+1. it's a synchronized data structure, and
 2. it's a list.
 
 Both of these things are highly useful, but most of the time
@@ -318,8 +318,6 @@ The trick is to come up with suitable units
 - units that do one well-specified thing,
 - are independent of each other, and
 - can be easily composed.
-
-TODO: *Add a positive example here*
 
 
 ### Just say no
@@ -358,7 +356,7 @@ Mathematical abstractions tend to be atomic, well-specified,
 independent, composable entities with a long story of use,
 abuse and improvements along the way.
 
-Take a look at [VertexSet][VertexSet], a datastructure that
+Take a look at [VertexSet][VertexSet], a data structure that
 keeps track of a group of vertices in a graph package.
 There are three mathematical abstractions here:
 
@@ -408,7 +406,6 @@ are built by putting together the right bits and pieces.
 This chapter contains a collection of API building blocks
 that have proven there worth over time.
 
-TODO:
 
 ### Functions that need little and give much
 
