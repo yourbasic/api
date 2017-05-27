@@ -436,7 +436,7 @@ In Java it's `toString`, `equals`, and `size`;
 in Go it's `String`, `Equal`, and `Len`.
 Suck it up, and get it right.
 
-### Functions that need little and give much
+### Write functions that need little and give much
 
 Java's `System.out.println` and Go's `fmt.Println` are real workhorses.
 They'll take any input and offer lots of important information in return.
@@ -461,10 +461,24 @@ for a fitting interface so far. It found it's current form only after
 trying out numerous graph data structures and implementing even more
 graph algorithms. There is no way I could have designed this up-front.
 
-### Generic code
+### Make it generic
 
-By the way, a library built on a perfectly fitting interface
-is a perfectly generic library. Think about that. 
+A library built on a perfectly fitting interface is
+a perfectly generic library. Think about that. 
+
+### Show, don't tell
+
+An example can demonstrate how an API is best used and help clarify
+subtle points. This [Bloom filter example][bloomexample] illustrates
+a typical Bloom filter use case, and it also helps clarify the tricky
+semantics of a Bloom filter probabilistic membership test.
+
+Once in a while, an example can fully replace a more standard API element.
+Take a look this [DFS example][graphdfs], which shows how to implement
+a depth-first search. Implementing DFS as a function with callbacks is
+really messy. There are at least four different points in the code where
+you may want to insert actions. Let's face it, occasionally cut and paste
+is the better approach.
 
 ### Immutables
 
@@ -472,11 +486,10 @@ is a perfectly generic library. Think about that.
 
 ### Errors
 
-### Examples
-
 
 #### Stefan Nilsson — [korthaj](https://github.com/korthaj)
 
+[bloomexample]: https://godoc.org/github.com/yourbasic/bloom#example-package--Basics
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
 [CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
 [CCBYSA2.5]: https://creativecommons.org/licenses/by-sa/2.5/deed.en
@@ -488,6 +501,7 @@ is a perfectly generic library. Think about that.
 [gocompat]: https://golang.org/doc/go1compat
 [gospec]: https://golang.org/ref/spec
 [graph]: https://github.com/yourbasic/graph
+[graphdfs]: https://godoc.org/github.com/yourbasic/graph#ex-package--DFS
 [graphit]: https://godoc.org/github.com/yourbasic/graph#Iterator
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [javacompat]: http://www.oracle.com/technetwork/java/javase/8-compatibility-guide-2156366.html
