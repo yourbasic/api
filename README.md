@@ -8,8 +8,8 @@ that are safe, efficient and easy to use.
 
 ![go](res/go.jpg)
 
-There will be many examples in [Go][go], the language itself being
-an outstanding case study of good API design, with many clean
+There will be many examples in [Go][go], the language itself
+being a case study of good API design, with many clean
 and simple interfaces on top of a huge complex implementation.
 There will also be some examples in [Java][java], a language
 that has had more time to accumulate cruft in the form of
@@ -21,7 +21,7 @@ be simpler and the semantics are explained in
 in the language specification. Still, you rarely hear complaints
 about thread support being limited in Go.
 
-Garbage collection in Go is another remarkable example.
+Garbage collection in Go is another impeccable example.
 The implementation is hideously complicated, while the API
 is null and void: there is no syntax and the language specification
 doesn't even mention the concept explicitly. It just works.
@@ -36,7 +36,7 @@ deserve to be known as **The 5 Commandments**.
 
 Let's start with the basic stuff. The rules never to be broken.
 The rules that we don't need to argue about, but that we still
-need to be reminded of, because we often forget about them.
+need to be reminded of.
 
 
 ### 1. Tell me what this thing is
@@ -46,13 +46,13 @@ need to be reminded of, because we often forget about them.
 > Preferably in the very first sentence.
 
 If people don't know what it is, they can't use it, duh.
-Still, it's not uncommon to see `README` files that starts with
-"Candide now supports the Pangloss 3.2 file format"
+Still, it's not uncommon to see a `README` file that starts with
+"Candide now supports the Pangloss 3.2 file format",
 but never tells what Candide is and what it has to offer.
 
 In the [Fenwick repo][fenwick] I stick my neck out and try to
-implement a small library that follows the commandments.
-Its `README` file starts out like this:
+implement a small library that follows The 5 Commandments.
+Its `README` file starts like this:
 
     # Your basic Fenwick tree
     
@@ -92,13 +92,13 @@ And finally, the nitty-gritty for those who want to know it all.
 
 #### Corollary
 
-The second commandment has an immediate corollary:
+The 2nd Commandment comes with an obvious corollary:
 
 > An API should say what **every exported function** does.
 
 Once again, if you don't know what it does you can't use it, duh.
-Undocumented functions are close to useless. The only way to use
-them safely is to perform a complete code review, including
+Undocumented functions are close to worthless. The only way to
+use them safely is to perform a complete code review, including
 necessary testing. That tends to be more work than writing
 the &$#! code yourself.
 
@@ -111,13 +111,12 @@ In programming, there is no room for guesswork.
 
 > If at all possible, an API **shouldn't** reveal any implementation details.
 
-Threading and garbage collection in Go are two great examples of interfaces
+Threading and garbage collection in Go are two examples of interfaces
 that get this right. In general, a Go programmer doesn't have to,
 and doesn't want to, worry about the intricacies of garbage collection
 and threading. It just works.
 
-In the [Fenwick repo][fenwick] I didn't manage to hide
-the implementation details completely, even though I tried:
+In the [Fenwick repo][fenwick] I didn't manage to fully hide the implementation:
 
 - The data type is called `List`, not `Tree`. That's because it **does**
   the job of a list, even though it's implemented as a tree.
@@ -147,7 +146,7 @@ That's a nice place to be in.
 > Every public software project needs a license.
 
 I'm not a lawyer and this is not legal advice, but it's my understanding
-that code without a license can only be legally used by its author.
+that code without a license can only be legally used by its own author.
 
 If you're looking for paying customers, you may want to seek
 actual legal advice on licensing. However, to turn your project into
@@ -197,9 +196,12 @@ Fenwick's compatibility policy is very simple, but still explicitly stated:
     is to handle issues that can't be resolved in any other
     reasonable way.
 
-[Go 1 and the Future of Go Programs][gocompat] is a complex and detailed
+[Go 1 and the Future of Go Programs][gocompat] is a full detailed
 compatibility document. It's required study for anyone working with
 large-scale library design and maintenance.
+
+For comparison, [Compatibility Guide for JDK 8][javacompat] is
+an entry point to the complex world of Java compatibility.
 
 
 #### Semantic versioning
@@ -212,7 +214,7 @@ using a three-part version number: `major.minor.patch`. You increment
 - `patch` when you make backwards-compatible bug fixes.
 
 The semantic versioning specification itself currently sits at version
-number `2.0.0`. This means that it broke  the fifth commandment,
+number `2.0.0`. This means that it broke  The 5th Commandment,
 and that no new features or patches have been introduced since then.
 Even so, it's a good convention to follow. And, once again,
 the Go project gets it right.
@@ -342,7 +344,7 @@ to the middle of an array is really inefficient; something you should
 typically avoid. That's what we have hash tables for.
 
 I know that it can be difficult to say no when the kids are throwing
-a tantrum, but remember the fifth commandment – the one that says that
+a tantrum, but remember The 5th Commandment – the one that says that
 a software library needs to be backwards compatible. You might be able
 to beat your candy addiction, but you don't get to remove anything
 from an API.
@@ -435,6 +437,7 @@ Suck it up, and get it right.
 [fenwickLICENSE]: https://github.com/yourbasic/fenwick/blob/master/LICENSE
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
+[javacompat]: http://www.oracle.com/technetwork/java/javase/8-compatibility-guide-2156366.html
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [so]: https://stackoverflow.com/
 [sv]: http://semver.org/
