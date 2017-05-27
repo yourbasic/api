@@ -400,7 +400,7 @@ types of tasks and projects. Don't rush it.
 *Commercial featuring Lorne Greene, 1970s, public domain.*
 
 
-![Donald E. Knuth](res/knuth.jpg)
+![Don Knuth](res/knuth.jpg)
 
 > Thus, I came to the conclusion that the designer of a new system
 > must not only be the implementor and the first large-scale user;
@@ -410,7 +410,7 @@ types of tasks and projects. Don't rush it.
 > hundreds of improvements would never have been made, because I would
 > never have thought of them or perceived why they were important.
 
-**[The Errors Of TeX][texerrors]** *Donald E. Knuth, 1989.*
+**[The Errors Of TeX][texerrors]** *Don Knuth, 1989.*
 *Image from [Wikipedia][wikiknuth], [CC BY-SA 2.5][CCBYSA2.5].*
 
 
