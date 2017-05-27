@@ -441,7 +441,29 @@ Java's `System.out.println` and Go's `fmt.Println` are real workhorses.
 They'll take any input and offer lots of important information in return.
 This is something we should strive for in our own API design.
 
-### Interfaces
+### Find a fitting interface
+
+The reason the print methods in Java and Go are so powerful
+is not only that they take any input, they are also able
+to handle this input in a sensible way.
+
+In general, you want to find an interface that accepts everything
+your code can handle; and little or nothing else.
+This is typically very hard to do before you've had a good helping
+of your own dog good. That's why I like the Go approach:
+
+> You start by writing concrete code, and in the process
+> you discover interfaces that are increasingly accurate.
+
+The [graph.Iterator][graphit] interface is the fruit of my longest search
+for a fitting interface so far. It found it's current form only after
+trying out numerous graph data structures and implementing even more
+graph algorithms. There is no way I could have designed this up-front.
+
+#### Generic code
+
+By the way, a library built on a perfectly fitting interface
+is a perfectly generic library. Think about that. 
 
 ### Immutables
 
@@ -458,12 +480,14 @@ This is something we should strive for in our own API design.
 [CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
 [CCBYSA2.5]: https://creativecommons.org/licenses/by-sa/2.5/deed.en
 [CCBYSA3]: https://creativecommons.org/licenses/by-sa/3.0/deed.en
-[go]: https://en.wikipedia.org/wiki/Go_(programming_language)
-[gocompat]: https://golang.org/doc/go1compat
-[gospec]: https://golang.org/ref/spec
 [fenwick]: https://github.com/yourbasic/fenwick
 [fenwickLICENSE]: https://github.com/yourbasic/fenwick/blob/master/LICENSE
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
+[go]: https://en.wikipedia.org/wiki/Go_(programming_language)
+[gocompat]: https://golang.org/doc/go1compat
+[gospec]: https://golang.org/ref/spec
+[graph]: https://github.com/yourbasic/graph
+[graphit]: https://godoc.org/github.com/yourbasic/graph#Iterator
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [javacompat]: http://www.oracle.com/technetwork/java/javase/8-compatibility-guide-2156366.html
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
