@@ -460,7 +460,7 @@ for a fitting interface so far. It found it's current form only after
 trying out numerous graph data structures and implementing even more
 graph algorithms. There is no way I could have designed this up-front.
 
-#### Generic code
+### Generic code
 
 By the way, a library built on a perfectly fitting interface
 is a perfectly generic library. Think about that. 
