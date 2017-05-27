@@ -329,8 +329,6 @@ The trick is to come up with suitable units
 - are independent of each other, and
 - can be easily composed.
 
-TODO: *A good example of this would fit nicely here.*
-
 
 ### Just say no
 
@@ -424,8 +422,7 @@ types of tasks and projects. Don't rush it.
 
 Grand ideas and theories aside, in the end all human artefacts
 are built by putting together the right bits and pieces.
-This chapter contains a collection of API building blocks
-that have proven there worth over time.
+This is a growing list of tried-and-true API building blocks.
 
 ### Keep it consistent
 
@@ -456,10 +453,10 @@ of your own dog good. That's why I like the Go approach:
 > You start by writing concrete code, and in the process
 > you discover interfaces that are increasingly accurate.
 
-The [graph.Iterator][graphit] interface is the fruit of my longest search
-for a fitting interface so far. It found it's current form only after
-trying out numerous graph data structures and implementing even more
-graph algorithms. There is no way I could have designed this up-front.
+The [graph.Iterator][graphit] interface is the result of my longest search
+for a well-fitting interface so far. I tried numerous graph data structures
+and implemented even more graph algorithms before finding a presentable fit.
+There is no way I could have designed this up-front.
 
 ### Make it generic
 
@@ -479,12 +476,6 @@ a depth-first search. Implementing DFS as a function with callbacks is
 really messy. There are at least four different points in the code where
 you may want to insert actions. Let's face it, occasionally cut and paste
 is the better approach.
-
-### Immutables
-
-### Names
-
-### Errors
 
 
 #### Stefan Nilsson — [korthaj](https://github.com/korthaj)
