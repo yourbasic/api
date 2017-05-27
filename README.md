@@ -8,6 +8,8 @@ that are safe, efficient and easy to use.
 
 ![go](res/go.jpg)
 
+*Image from [Pixabay][pixabay], [CC0][CC0].*
+
 There will be many examples in [Go][go], the language itself
 being a case study of good API design, with many clean
 and simple interfaces on top of a huge complex implementation.
@@ -26,7 +28,7 @@ The implementation is hideously complicated, while the API
 is null and void: there is no syntax and the language specification
 doesn't even mention the concept explicitly. It just works.
 
-Even though API design is as much an art as a science, there still
+Even though API design is as much an art as a science, there stillhttps://pixabay.com/en/hand-finger-button-switch-start-944307/
 are some fundamental rules that you should be aware of. Rules that
 will cost you dearly if you break them. Enough so that they
 deserve to be known as **The 5 Commandments**.
@@ -399,7 +401,7 @@ types of tasks and projects. Don't rush it.
 *Commercial featuring Lorne Greene, 1970s, public domain.*
 
 
-![Don Knuth](res/knuth.jpg)
+![Don Knuth](res/knuth.jpg)li
 
 > Thus, I came to the conclusion that the designer of a new system
 > must not only be the implementor and the first large-scale user;
@@ -482,10 +484,12 @@ is the better approach.
 
 [bloomexample]: https://godoc.org/github.com/yourbasic/bloom#example-package--Basics
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
+[CC0]: https://creativecommons.org/publicdomain/zero/1.0/
 [CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
 [CCBYSA2.5]: https://creativecommons.org/licenses/by-sa/2.5/deed.en
 [CCBYSA3]: https://creativecommons.org/licenses/by-sa/3.0/deed.en
 [fenwick]: https://github.com/yourbasic/fenwick
+[fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [fenwickLICENSE]: https://github.com/yourbasic/fenwick/blob/master/LICENSE
 [fenwickREADME]: https://github.com/yourbasic/fenwick/blob/master/README.md
 [go]: https://en.wikipedia.org/wiki/Go_(programming_language)
@@ -496,7 +500,7 @@ is the better approach.
 [graphit]: https://godoc.org/github.com/yourbasic/graph#Iterator
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [javacompat]: http://www.oracle.com/technetwork/java/javase/8-compatibility-guide-2156366.html
-[fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
+[pixabay]: https://pixabay.com/en/hand-finger-button-switch-start-944307/
 [so]: https://stackoverflow.com/
 [sv]: http://semver.org/
 [texerrors]: http://dl.acm.org/citation.cfm?id=66416
