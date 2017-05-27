@@ -232,8 +232,8 @@ a simpler API is almost always a better API.
 
 A function is a simple and beautiful thing. It's easy to use,
 easy to understand, easy to test, and it doesn't come with any
-hidden dependencies or side effects. And, perhaps most importantly,
-functions can be freely composed. The better part of mathematics
+hidden side effects. And, perhaps most importantly, functions
+can be freely composed. The better part of mathematics
 is built from functions. If you can find a nice design using
 functions only, good for you.
 
@@ -260,7 +260,7 @@ An object, or `struct` if you like, isn't quite as simple and
 beautiful as a function, but it has memory. Many elegant and
 powerful abstractions consist of a single object with a set of
 attached methods. In fact, at the core this is what object orientation
-is all about. The rest is just bells and whistles.
+is all about. The rest is mostly bells and whistles.
 
 #### Inheritance
 
@@ -270,33 +270,35 @@ the need to use it. There are simpler and safer ways to design software.
 
 ### Don't use a lot where a little will do
 
-    To paint a little thing like that you smeared 
-    Carelessly passing with your robes afloat, — 
-    Yet do much less, so much less, Someone says, 
-    (I know his name, no matter) — so much less! 
-    Well, less is more, Lucrezia: I am judged. 
+    To paint a little thing like that you smeared
+    Carelessly passing with your robes afloat, —
+    Yet do much less, so much less, Someone says,
+    (I know his name, no matter) — so much less!
+    Well, less is more, Lucrezia: I am judged.
 
 *From Andrea del Sarto by Robert Browning, 1855.*
 
 Adding to Browning's advice would be a mistake. Instead, a war story:
 
-The Java `io` and `nio` packages are humongous — and incompatible.
-In fact, they are so big that many of us end up at [Stack Overflow][so]
-trying to get those pesky bytes from a file into our Java program.
-Unfortunately, most of the brave souls who share Java code snippets
-on Stack Overflow also didn't read the full spec, and got it wrong.
+The `java.io`, `java.nio`, `java.nio.channels`, `java.nio.channels.spi`,
+`java.nio.file`, `java.nio.file.attribute`, `java.nio.file.spi`,
+`java.nio.charset`,  and `java.nio.charset.spi` packages have many methods.
+In fact, the API is so overwhelming that many of us end up at [Stack Overflow][so]
+trying to move streams of bytes in and out of our Java programs.
+Unfortunately, many of those who share code snippets on Stack Overflow
+didn't read the full spec either, and got it wrong.
 
 For many years I didn't know that my Java programs used the platform
-default character encoding. That's an ugly bug, and I'm not the only
-one to have fallen into this trap.
+default character encoding. That's an ugly bug, and I'm not the only one
+to fall into this trap.
 
 There probably is no way to design a really good general-purpose
 IO library at this point. After all, such a library must support
 low-level operations on many diverse platforms. But please, don't
 add more fuel to the fire.
 
-The Go `io` package is a new fresh start. The library takes some
-getting used to but it's small and manageable, and handles the most
+The Go `io` package is a fresh new start. The library takes some
+getting used to, but it's small and manageable and handles the most
 common use cases well. Unfortunately, no amount of API design can
 fully protect us from the thorny history of file systems and
 fleeting memory technologies.
@@ -315,7 +317,7 @@ The problem with `Vector` is that it does **two things**:
 1. it's a synchronized data structure, and
 2. it's a list.
 
-Both of these things are highly useful, but most of the time
+Both of these things are very useful, but most of the time
 you only want one of them.
 
 There is nothing wrong with putting a lot of good stuff in you library.
@@ -326,12 +328,14 @@ The trick is to come up with suitable units
 - are independent of each other, and
 - can be easily composed.
 
+TODO: *A good example of this would fit nicely here.*
+
 
 ### Just say no
 
 > An API shouldn't encourage bad design decisions.
 
-The `add` method in Java's `ArrayList` is a clearcut example:
+The `add` method in Java's `ArrayList` is a case in point:
 
     public void add(int index, E element)
     
@@ -343,11 +347,11 @@ This method makes it easy to do the wrong thing. Adding a new element
 to the middle of an array is really inefficient; something you should
 typically avoid. That's what we have hash tables for.
 
-I know that it can be difficult to say no when the kids are throwing
-a tantrum, but remember The 5th Commandment – the one that says that
-a software library needs to be backwards compatible. You might be able
-to beat your candy addiction, but you don't get to remove anything
-from an API.
+I know that it's difficult to say no when the kids are throwing a tantrum.
+But remember The 5th Commandment (not the one about honouring thy father
+and thy mother), the one that says that a software library needs to be
+backwards compatible. You might be able to beat your candy addiction,
+but you don't get to remove anything from an API.
 
 
 ### Math is simple
@@ -363,19 +367,19 @@ Mathematical abstractions tend to be atomic, well-specified,
 independent, composable entities with a long story of use,
 abuse and improvements along the way.
 
-Take a look at [VertexSet][VertexSet], a data structure that
-keeps track of a group of vertices in a graph.
-There are three mathematical abstractions here:
+Take a look at [VertexSet][VertexSet], a data structure for
+specifying a group of vertices in a graph. There are three
+mathematical abstractions here:
 
 - the vertices themselves are identified by **integers**,
 - a group of vertices is a **set** with **union**, **intersection**,
   **set difference** and **membership** operations, and
 - the constructor takes an **interval** as input.
 
-There are two main reasons why I ended up with this API design.
-First, I believe that the included operations are useful, necessary
-and sufficient. Secondly, they favor designs that can be
-efficiently implemented in this particular package.
+There are two main reasons why I ended up with this API.
+First, I believe that the included operations are useful,
+necessary and sufficient. Secondly, they favor designs that
+can be efficiently implemented in this particular package.
 
 
 # Don't rush it
