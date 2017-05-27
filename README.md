@@ -382,21 +382,36 @@ necessary and sufficient. Secondly, they favor designs that
 can be efficiently implemented in this particular package.
 
 
-# Don't rush it
+# Give it time
+
+The only certain way to know if an API works as intended
+is to use it over an extended period of time on different
+types of tasks and projects. Don't rush it.
 
 ![rest](res/rest.jpg)
 
 **Rest at harvest**
 *Painting by [William-Adolphe Bouguereau][wab], 1865, public domain.*
 
-The only certain way to know if an API works as intended
-is to use it over an extended period of time on different
-types of tasks and projects.
 
 ![Lorne Greene](res/greene.jpg)
 
 **Eat your own dog food**
 *Commercial featuring Lorne Greene, 1970s, public domain.*
+
+
+![Donald E. Knuth](res/knuth.jpg)
+
+> Thus, I came to the conclusion that the designer of a new system
+> must not only be the implementor and the first large-scale user;
+> the designer should also write the first user manual. The separation
+> of any of these four components would have hurt TeX significantly.
+> If I had not participated fully in all these activities, literally
+> hundreds of improvements would never have been made, because I would
+> never have thought of them or perceived why they were important.
+
+**[The Errors Of TeX][texerrors]** *Donald E. Knuth, 1989.*
+*Image from [Wikipedia][wikiknuth], [CC BY-SA 2.5][CCBYSA2.5].*
 
 
 # Tools of the trade
@@ -441,6 +456,7 @@ This is something we should strive for in our own API design.
 
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
 [CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
+[CCBYSA2.5]: https://creativecommons.org/licenses/by-sa/2.5/deed.en
 [CCBYSA3]: https://creativecommons.org/licenses/by-sa/3.0/deed.en
 [go]: https://en.wikipedia.org/wiki/Go_(programming_language)
 [gocompat]: https://golang.org/doc/go1compat
@@ -453,7 +469,9 @@ This is something we should strive for in our own API design.
 [fenwickDOC]: https://godoc.org/github.com/yourbasic/fenwick
 [so]: https://stackoverflow.com/
 [sv]: http://semver.org/
+[texerrors]: http://dl.acm.org/citation.cfm?id=66416
 [ua]: https://commons.wikimedia.org/wiki/User:Cccefalon/Profile
 [VertexSet]: https://godoc.org/github.com/yourbasic/graph/build#VertexSet
 [wab]: https://en.wikipedia.org/wiki/William-Adolphe_Bouguereau
+[wikiknuth]: https://en.wikipedia.org/wiki/File:KnuthAtOpenContentAlliance.jpg
 [zf]: https://commons.wikimedia.org/wiki/User_talk:ZooFari
