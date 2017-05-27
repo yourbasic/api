@@ -386,21 +386,25 @@ can be efficiently implemented in this particular package.
 
 ![rest](res/rest.jpg)
 
-*Rest at harvest, painting by [William-Adolphe Bouguereau][wab], public domain.*
+**Rest at harvest**
+*Painting by [William-Adolphe Bouguereau][wab], 1865, public domain.*
 
-The only sure-fire way to know if an API works as intended
+The only certain way to know if an API works as intended
 is to use it over an extended period of time on different
 types of tasks and projects.
 
-> To be a good API designer you will have to prepare and eat
-> your own dog food until you like it.
+![Lorne Greene](res/greene.jpg)
+
+**Eat your own dog food**
+*Commercial featuring Lorne Greene, 1970s, public domain.*
 
 
 # Tools of the trade
 
 ![tool](res/tool.jpg)
 
-*Hobel mit Spänen und Zimmermannsbleistift, image by [Uwe Aranas][ua], [CC BY-SA 3.0][CCBYSA3].*
+**Hobel mit Spänen und Zimmermannsbleistift**
+*Image by [Uwe Aranas][ua], 2014, [CC BY-SA 3.0][CCBYSA3].*
 
 Grand ideas and theories aside, in the end all human artefacts
 are built by putting together the right bits and pieces.
