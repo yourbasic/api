@@ -422,6 +422,10 @@ Suck it up, and get it right.
 
 ### Functions that need little and give much
 
+Java's `System.out.println` and Go's `fmt.Println` are real workhorses.
+They'll take any input and offer lots of important information in return.
+This is something we should strive for in our own API design.
+
 ### Interfaces
 
 ### Immutables
