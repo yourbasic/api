@@ -259,8 +259,9 @@ programmers. Don't be afraid to use them.
 An object, or `struct` if you like, isn't quite as simple and
 beautiful as a function, but it has memory. Many elegant and
 powerful abstractions consist of a single object with a set of
-attached methods. In fact, at the core this is what object orientation
-is all about. The rest is mostly bells and whistles.
+attached methods. The best ones tend to be immutable. In fact,
+at the core this is what object orientation is all about.
+The rest is mostly bells and whistles.
 
 #### Inheritance
 
@@ -445,7 +446,7 @@ This is something we should strive for in our own API design.
 
 The reason the print methods in Java and Go are so powerful
 is not only that they take any input, they are also able
-to handle this input in a sensible way.
+to handle that input in a sensible way.
 
 In general, you want to find an interface that accepts everything
 your code can handle; and little or nothing else.
