@@ -10,10 +10,10 @@ that are safe, efficient and easy to use.
 
 *Image from [Pixabay][pixabay], [CC0 1.0][CC0].*
 
-There will be many examples in [Go][go], the language itself
-being a case study of good API design, with many clean
-and simple interfaces on top of a huge complex implementation.
-There will also be some examples in [Java][java], a language
+Many examples are in [Go][go], the language itself being
+a case study of good API design, with clean and simple
+interfaces on top of a huge complex implementation.
+There are also a few examples in [Java][java], a language
 that has had more time to accumulate cruft in the form of
 superfluous and dysfunctional elements.
 
