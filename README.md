@@ -28,7 +28,7 @@ The implementation is hideously complicated, while the API
 is null and void: there is no syntax and the language specification
 doesn't even mention the concept explicitly. It just works.
 
-Even though API design is as much an art as a science, there stillhttps://pixabay.com/en/hand-finger-button-switch-start-944307/
+Even though API design is as much an art as a science, there still
 are some fundamental rules that you should be aware of. Rules that
 will cost you dearly if you break them. Enough so that they
 deserve to be known as **The 5 Commandments**.
@@ -246,15 +246,13 @@ the time of day or some other nasty surprise.)
 #### Java detour
 
 The `static` keyword in Java has a bad reputation. Probably because
-it has so many different meanings. A static class is a collection of
-global variables, and you typically want to avoid that. (This doesn't
-apply to static nested classes, but let's not go there. This chapter
-is about simplicity.)
+it has so many different meanings. A static field is essentially a
+global variable, and you typically want to avoid those.
 
 A static method, however, is Java's twisted way to declare
-a pure function. This is a case where Java makes you jump through
-hoops to do the right thing. Functions are great also for Java
-programmers. Don't be afraid to use them.
+a function, as opposed to a method. This is a case where Java
+makes you jump through hoops to do the right thing. Functions
+are great also for Java programmers. Don't be afraid to use them.
 
 #### Objects
 
