@@ -448,7 +448,7 @@ to handle that input in a sensible way.
 In general, you want to find an interface that accepts everything
 your code can handle; and little or nothing else.
 This is typically very hard to do before you've had a good helping
-of your own dog good. That's why I like the Go approach:
+of your own dog food. That's why I like the Go approach:
 
 > You start by writing concrete code, and in the process
 > you discover interfaces that are increasingly accurate.
