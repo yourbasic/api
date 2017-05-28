@@ -8,7 +8,7 @@ that are safe, efficient and easy to use.
 
 ![go](res/go.jpg)
 
-*Image from [Pixabay][pixabay], [CC0][CC0].*
+*Image from [Pixabay][pixabay], [CC0 1.0][CC0].*
 
 There will be many examples in [Go][go], the language itself
 being a case study of good API design, with many clean
@@ -484,7 +484,7 @@ is the better approach.
 
 [bloomexample]: https://godoc.org/github.com/yourbasic/bloom#example-package--Basics
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
-[CC0]: https://creativecommons.org/publicdomain/zero/1.0/
+[CC0]: https://creativecommons.org/publicdomain/zero/1.0/deed.en
 [CCBY3]: https://creativecommons.org/licenses/by/3.0/deed.en
 [CCBYSA2.5]: https://creativecommons.org/licenses/by-sa/2.5/deed.en
 [CCBYSA3]: https://creativecommons.org/licenses/by-sa/3.0/deed.en
