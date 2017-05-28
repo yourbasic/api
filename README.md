@@ -260,9 +260,9 @@ programmers. Don't be afraid to use them.
 
 An object, or `struct` if you like, isn't quite as simple and
 beautiful as a function, but it has memory. Many elegant and
-powerful abstractions consist of a single object with a set of
-attached methods. The best ones tend to be immutable. In fact,
-at the core this is what object orientation is all about.
+powerful abstractions consist of a single object with a few
+attached methods. The very best ones tend to be immutable.
+At the core this is what object orientation is all about.
 The rest is mostly bells and whistles.
 
 #### Inheritance
@@ -288,8 +288,8 @@ The `java.io`, `java.nio`, `java.nio.channels`, `java.nio.channels.spi`,
 `java.nio.charset`,  and `java.nio.charset.spi` packages have many methods.
 In fact, the API is so overwhelming that many of us end up at [Stack Overflow][so]
 trying to move streams of bytes in and out of our Java programs.
-Unfortunately, many of those who share code snippets on Stack Overflow
-didn't read the full spec either, and got it wrong.
+Unfortunately, many of the friendly people who share code snippets
+on Stack Overflow didn't read the full spec either, and got it wrong.
 
 For many years I didn't know that my Java programs used the platform
 default character encoding. That's an ugly bug, and I'm not the only one
@@ -401,7 +401,7 @@ types of tasks and projects. Don't rush it.
 *Commercial featuring Lorne Greene, 1970s, public domain.*
 
 
-![Don Knuth](res/knuth.jpg)li
+![Don Knuth](res/knuth.jpg)
 
 > Thus, I came to the conclusion that the designer of a new system
 > must not only be the implementor and the first large-scale user;
