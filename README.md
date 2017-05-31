@@ -4,7 +4,7 @@
 
 ![go](res/go.jpg)
 
-*Image from [Pixabay][pixabay], [CC0 1.0][CC0].*
+*Image from [Pixabay][pixabaygo], [CC0 1.0][CC0].*
 
 # Table of contents
 
@@ -78,6 +78,10 @@ deserve to be known as **The 5 Commandments**.
 Let's start with the basic stuff. The rules never to be broken.
 The rules that we don't need to argue about, but that we still
 need to be reminded of.
+
+![law](res/law.jpg)
+
+*Image from [Pixabay][pixabaylaw], [CC0 1.0][CC0].*
 
 
 ### 1. Tell me what this thing is
@@ -263,12 +267,12 @@ the Go project gets it right.
 
 # Keep it simple
 
+Even though API design often requires us to make difficult trade-offs,
+a simpler API is almost always a better API.
+
 ![scissors](res/scissors.png)
 
 *Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
-
-Even though API design often requires us to make difficult trade-offs,
-a simpler API is almost always a better API.
 
 
 ### Don't use complicated constructs where simple ones will do
@@ -434,10 +438,11 @@ types of tasks and projects. Don't rush it.
 
 ### Eat your own dog food
 
+Eat your own dog food. Lorne Greene said it. Don Knuth dit it.
+
 ![Lorne Greene](res/greene.jpg)
 
-**Eat your own dog food**
-*Commercial featuring Lorne Greene, 1970s, public domain.*
+*Dog food commercial featuring Lorne Greene, 1970s, public domain.*
 
 
 ![Don Knuth](res/knuth.jpg)
@@ -459,6 +464,14 @@ types of tasks and projects. Don't rush it.
 Tutorials, examples and quick start guides are great tools for
 improving an API. The goal is to make it effortless to get started
 and easy to perform common tasks.
+
+![Anton Chekhov](res/chekhov.jpg)
+
+> Don't tell me the moon is shining;
+> show me the glint of light on broken glass.
+
+*Anton Chekhov with Maxim Gorky, Yalta 1900.*
+
 
 ### Create tutorials
 
@@ -553,7 +566,8 @@ a perfectly generic library. Think about that.
 [graphit]: https://godoc.org/github.com/yourbasic/graph#Iterator
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [javacompat]: http://www.oracle.com/technetwork/java/javase/8-compatibility-guide-2156366.html
-[pixabay]: https://pixabay.com/en/hand-finger-button-switch-start-944307/
+[pixabaygo]: https://pixabay.com/en/hand-finger-button-switch-start-944307/
+[pixabaylaw]: https://pixabay.com/en/law-justice-court-judge-legal-1063249/
 [so]: https://stackoverflow.com/
 [sv]: http://semver.org/
 [texerrors]: http://dl.acm.org/citation.cfm?id=66416
