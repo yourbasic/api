@@ -4,7 +4,8 @@
 
 ![go](res/go.jpg)
 
-*Image from [Pixabay][pixabaygo], [CC0 1.0][CC0].*
+[credit]: <> (Image from [Pixabay][pixabaygo], [CC0 1.0][CC0].)
+
 
 # Table of contents
 
@@ -43,7 +44,7 @@
 * [Make it generic](#make-it-generic)
 
 
-### Introduction
+# Introduction
 
 The aim of this text is to explore API design and try to find
 strategies and rules that can help us create code libraries
@@ -81,7 +82,7 @@ need to be reminded of.
 
 ![law](res/law.jpg)
 
-*Image from [Pixabay][pixabaylaw], [CC0 1.0][CC0].*
+[credit]: <> (Image from [Pixabay][pixabaylaw], [CC0 1.0][CC0].)
 
 
 ### 1. Tell me what this thing is
@@ -433,7 +434,7 @@ types of tasks and projects. Don't rush it.
 ![rest](res/rest.jpg)
 
 **Rest at harvest**
-*Painting by [William-Adolphe Bouguereau][wab], 1865, public domain.*
+*Painting by [William-Adolphe Bouguereau][wab], 1865.*
 
 
 ### Eat your own dog food
@@ -442,7 +443,7 @@ Eat your own dog food. Lorne Greene said it. Don Knuth dit it.
 
 ![Lorne Greene](res/greene.jpg)
 
-*Dog food commercial featuring Lorne Greene, 1970s, public domain.*
+*Dog food commercial featuring Lorne Greene, 1970s.*
 
 
 ![Don Knuth](res/knuth.jpg)
