@@ -413,6 +413,33 @@ types of tasks and projects. Don't rush it.
 *Image from [Wikipedia][wikiknuth], [CC BY-SA 2.5][CCBYSA2.5].*
 
 
+# Show, don't tell
+
+Tutorials, examples and quick start guides are great tools for
+improving an API. The goal is to make it effortless to get started
+and easy to perform common tasks.
+
+### Tutorials
+
+[A Tour of Go][gotour] is a nice example of both a quick start and
+a tutorial. It's an interactive online tutorial that let's you try
+Go programming inside your browser without installing any software.
+
+### Examples
+
+An example can demonstrate how an API is best used and
+help clarify subtle points. This [Bloom filter example][bloomexample]
+illustrates a typical Bloom filter use case, and it also helps clarify
+the tricky semantics of a Bloom filter probabilistic membership test.
+
+Once in a while, an example can fully replace a more standard API element.
+Take a look this [DFS example][graphdfs], which shows how to implement
+a depth-first search. Implementing DFS as a function with callbacks is
+really messy. There are at least four different points in the code where
+you may want to insert actions. Let's face it, occasionally cut and paste
+is the better approach.
+
+
 # Tools of the trade
 
 ![tool](res/tool.jpg)
@@ -460,22 +487,8 @@ There is no way I could have designed this up-front.
 
 ### Make it generic
 
-A library built on a perfectly fitting interface is
+A library based on a perfectly fitting interface is
 a perfectly generic library. Think about that. 
-
-### Show, don't tell
-
-An example can demonstrate how an API is best used and help clarify
-subtle points. This [Bloom filter example][bloomexample] illustrates
-a typical Bloom filter use case, and it also helps clarify the tricky
-semantics of a Bloom filter probabilistic membership test.
-
-Once in a while, an example can fully replace a more standard API element.
-Take a look this [DFS example][graphdfs], which shows how to implement
-a depth-first search. Implementing DFS as a function with callbacks is
-really messy. There are at least four different points in the code where
-you may want to insert actions. Let's face it, occasionally cut and paste
-is the better approach.
 
 
 #### Stefan Nilsson — [korthaj](https://github.com/korthaj)
@@ -493,6 +506,7 @@ is the better approach.
 [go]: https://en.wikipedia.org/wiki/Go_(programming_language)
 [gocompat]: https://golang.org/doc/go1compat
 [gospec]: https://golang.org/ref/spec
+[gotour]: https:tour.golang.org
 [graph]: https://github.com/yourbasic/graph
 [graphdfs]: https://godoc.org/github.com/yourbasic/graph#ex-package--DFS
 [graphit]: https://godoc.org/github.com/yourbasic/graph#Iterator
