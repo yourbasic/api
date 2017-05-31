@@ -2,13 +2,52 @@
 
 ### Thoughts on good API design
 
-The aim of this text is to explore API design and try to find
-strategies and rules that can help us create code libraries
-that are safe, efficient and easy to use.
-
 ![go](res/go.jpg)
 
 *Image from [Pixabay][pixabay], [CC0 1.0][CC0].*
+
+# Table of contents
+
+[Introduction](#introduction)
+
+[The 5 Commandments](#the-5-commandments)
+
+1. [Tell me what this thing is](#1-tell-me-what-this-thing-is)
+2. [Tell me what it does](#2-tell-me-what-it-does)
+3. [Don't tell me how it works](#3-don-t-tell-me-how-it-works)
+4. [Grant me the right to use it](#4-grant-me-the-right-to-use-it)
+5. [Don't change it](#5-don-t-change-it)
+
+[Keep it simple](#keep-it-simple)
+
+* [Don't use complicated constructs where simple ones will do](#don-t-use-complicated-constructs-where-simple-ones-will-do)
+* [Don't use a lot where a little will do](#don-t-use-a-lot-where-a-little-will-do)
+* [One package, one idea](#one-package-one-idea)
+* [Just say no](#just-say-no)
+* [Math is simple](#math-is-simple)
+
+[Give it time](#give-it-time)
+
+* [Eat your own dog food](#eat-your-own-dog-food)
+
+[Show, don't tell](#show-don-t-tell)
+
+* [Create tutorials](#create-tutorials)
+* [Use examples](#use-examples)
+
+[Tools of the trade](#tools-of-the-trade)
+
+* [Keep it consistent](#keep-it-consistent)
+* [Write functions that need little and give much](#write-functions-that-need-little-and-give-much)
+* [Find a fitting interface](#find-a-fitting-interface)
+* [Make it generic](#make-it-generic)
+
+
+### Introduction
+
+The aim of this text is to explore API design and try to find
+strategies and rules that can help us create code libraries
+that are safe, efficient and easy to use.
 
 Many examples are in [Go][go], the language itself being
 a case study of good API design, with clean and simple
@@ -224,6 +263,10 @@ the Go project gets it right.
 
 # Keep it simple
 
+![scissors](res/scissors.png)
+
+*Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
+
 Even though API design often requires us to make difficult trade-offs,
 a simpler API is almost always a better API.
 
@@ -307,10 +350,6 @@ fleeting memory technologies.
 
 ### One package, one idea
 
-![scissors](res/scissors.png)
-
-*Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
-
 Chances are that you have never used the Java `Vector` class.
 It was superseded by `ArrayList` already in Java 1.2.
 The problem with `Vector` is that it does **two things**:
@@ -393,6 +432,8 @@ types of tasks and projects. Don't rush it.
 *Painting by [William-Adolphe Bouguereau][wab], 1865, public domain.*
 
 
+### Eat your own dog food
+
 ![Lorne Greene](res/greene.jpg)
 
 **Eat your own dog food**
@@ -419,13 +460,13 @@ Tutorials, examples and quick start guides are great tools for
 improving an API. The goal is to make it effortless to get started
 and easy to perform common tasks.
 
-### Tutorials
+### Create tutorials
 
 [A Tour of Go][gotour] is a nice example of both a quick start and
 a tutorial. It's an interactive online tutorial that let's you try
 Go programming inside your browser without installing any software.
 
-### Examples
+### Use examples
 
 An example can demonstrate how an API is best used and
 help clarify subtle points. This [Bloom filter example][bloomexample]
@@ -433,7 +474,7 @@ illustrates a typical Bloom filter use case, and it also helps clarify
 the tricky semantics of a Bloom filter probabilistic membership test.
 
 Once in a while, an example can fully replace a more standard API element.
-Take a look this [DFS example][graphdfs], which shows how to implement
+Take a look this [DFS implementation example][graphdfs], which shows how to implement
 a depth-first search. Implementing DFS as a function with callbacks is
 really messy. There are at least four different points in the code where
 you may want to insert actions. Let's face it, occasionally cut and paste
