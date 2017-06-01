@@ -440,7 +440,7 @@ types of tasks and projects. Don't rush it.
 
 ### Eat your own dog food
 
-Eat your own dog food. Lorne Greene said it. Don Knuth dit it.
+Eat your own dog food. Lorne Greene said it. Don Knuth did it.
 
 ![Lorne Greene](res/greene.jpg)
 
@@ -576,8 +576,8 @@ Here is a first-rate example from Go's aptly named `net/http` package.
     }
 
 When naming interfaces, we're obliged to do what the Roman's do.
-In Java it's `Comparable` and `Serializable`;
-in Go it's `Reader`, `Writer` and `RoundTripper`.
+In Java it's `Comparable` and `Serializable`; in Go it's `Reader`,
+`Writer`, and even a `RoundTripper` home run.
 
 For completeness, let's also discuss local variables and function arguments.
 A short descriptive noun, such as `name`, `path` or `proc`, is often
