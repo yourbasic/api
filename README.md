@@ -548,42 +548,59 @@ a perfectly generic library. Think about that.
 
 ### Names, keep them short and sweet
 
-- Short active verbs or verb phrases make for good function names,
-  but I prefer `Name` to `GetName`. The corresponding setter function,
-  if needed, would still be called `SetName`.
+Short active verbs or verb phrases make for good function names,
+even though I prefer to use `Name` rather than `GetName`.
+The corresponding setter function, if needed, would still
+be called `SetName`. Likewise, `Running` is a viable alternative
+to `IsRunning`.
 
-- Likewise, `Running` is a viable alternative to `IsRunning`.
+A pithy noun or noun phrase is often an ideal name for a constant,
+a type, or a field of an object or a struct, considering that such names
+often need to be recognized over longer stretches of code.
 
-- A short descriptive noun, like `name` or `proc`, is often
-  a good choice for a variable.
+Here is a first-rate example from Go's aptly named `net/http` package.
 
-  - For indices `i`, `j`, and `k` are universally used,
-  - local integers are often known as `m` or `n`,
-  - local floats might be `x`, `y`, or `z`,
-  - and local anonymous strings listen to the names `s` and `t`.
+    // A Client is an HTTP client. […]
+    type Client struct {
+        // Transport specifies the mechanism by which individual HTTP requests are made. […]
+        Transport RoundTripper
+        
+        // CheckRedirect specifies the policy for handling redirects. […]
+        CheckRedirect func(req *Request, via []*Request) error
+        
+        // Jar specifies the cookie jar. […]
+        Jar CookieJar
+        
+        // Timeout specifies a time limit for requests made by this Client. […]
+        Timeout time.Duration
+    }
 
-- Longer nouns and noun phrases are sometimes required for the names
-  of functions, types, and the fields of an object or struct;
-  such names need to be recognized over longer stretches of code.
+When naming interfaces, we're obliged to do what the Roman's do.
+In Java it's `Comparable` and `Serializable`;
+in Go it's `Reader`and `Writer`.
 
-- When naming interfaces, we're obliged to do what the Roman's do.
-  In Java it's `Comparable` and `Serializable`;
-  in Go it's `Reader`and `Writer`.
+For completeness, let's also discuss local variables and function arguments.
+A short descriptive noun, such as `name`, `path` or `proc`, is often
+a good choice here.
 
-Let's see what happens if we try to follow this advice.
+- For indices `i`, `j`, and `k` are universally used,
+- local integers are often known as `m` or `n`,
+- local floats might be `x`, `y`, or `z`,
+- and local anonymous strings listen to the names `s` and `t`.
 
-    if proc.Running() && proc.Name() != name {
-    	proc.SetName(name)
+Here's a code snippet that follows the advice in this section.
+
+    if proc.Running() && proc.Name() != path {
+    	proc.SetName(path)
     }
 
 For comparison, here's a slightly more verbose version.
 
-    if process.IsRunning() && process.GetName() != myProcessName {
-        process.SetName(myProcessName)
+    if process.IsRunning() && process.GetName() != myPathName {
+        process.SetName(myPathName)
     }
 
 Yikes.
-
 
 #### Stefan Nilsson — [korthaj](https://github.com/korthaj)
 
