@@ -537,7 +537,7 @@ of your own dog food. That's why I like the Go approach:
 
 The [graph.Iterator][graphit] interface is the result of my longest search
 for a well-fitting interface so far. I tried numerous graph data structures
-and implemented even more graph algorithms before finding a presentable fit.
+and implemented even more graph algorithms before finding a proper fit.
 There is no way I could have designed this up-front.
 
 ### Make it generic
