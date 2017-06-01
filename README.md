@@ -577,13 +577,13 @@ Here is a first-rate example from Go's aptly named `net/http` package.
 
 When naming interfaces, we're obliged to do what the Roman's do.
 In Java it's `Comparable` and `Serializable`;
-in Go it's `Reader`and `Writer`.
+in Go it's `Reader`, `Writer` and `RoundTripper`.
 
 For completeness, let's also discuss local variables and function arguments.
 A short descriptive noun, such as `name`, `path` or `proc`, is often
 a good choice here.
 
-- For indices `i`, `j`, and `k` are universally used,
+- For indices, `i`, `j`, and `k` are universally used,
 - local integers are often known as `m` or `n`,
 - local floats might be `x`, `y`, or `z`,
 - and local anonymous strings listen to the names `s` and `t`.
