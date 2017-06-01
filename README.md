@@ -40,8 +40,9 @@
 
 * [Keep it consistent](#keep-it-consistent)
 * [Write functions that need little and give much](#write-functions-that-need-little-and-give-much)
-* [Find a fitting interface](#find-a-fitting-interface)
+* [Find a well-fitting interface](#find-a-well-fitting-interface)
 * [Make it generic](#make-it-generic)
+* [Names, keep them short and sweet](#names-keep-them-short-and-sweet)
 
 
 # Introduction
@@ -521,7 +522,7 @@ Java's `System.out.println` and Go's `fmt.Println` are real workhorses.
 They'll take any input and offer lots of important information in return.
 This is something we should strive for in our own API design.
 
-### Find a fitting interface
+### Find a well-fitting interface
 
 The reason the print methods in Java and Go are so powerful
 is not only that they take any input, they are also able
@@ -543,7 +544,45 @@ There is no way I could have designed this up-front.
 ### Make it generic
 
 A library based on a perfectly fitting interface is
-a perfectly generic library. Think about that. 
+a perfectly generic library. Think about that.
+
+### Names, keep them short and sweet
+
+- Short active verbs or verb phrases make for good function names,
+  but I prefer `Name` to `GetName`. The corresponding setter function,
+  if needed, would still be called `SetName`.
+
+- Likewise, `Running` is a viable alternative to `IsRunning`.
+
+- A short descriptive noun, like `name` or `proc`, is often
+  a good choice for a variable.
+
+  - For indices `i`, `j`, and `k` are universally used,
+  - local integers are often known as `m` or `n`,
+  - local floats might be `x`, `y`, or `z`,
+  - and local anonymous strings listen to the names `s` and `t`.
+
+- Longer nouns and noun phrases are sometimes required for the names
+  of functions, types, and the fields of an object or struct;
+  such names need to be recognized over longer stretches of code.
+
+- When naming interfaces, we're obliged to do what the Roman's do.
+  In Java it's `Comparable` and `Serializable`;
+  in Go it's `Reader`and `Writer`.
+
+Let's see what happens if we try to follow this advice.
+
+    if proc.Running() && proc.Name() != name {
+    	proc.SetName(name)
+    }
+
+For comparison, here's a slightly more verbose version.
+
+    if process.IsRunning() && process.GetName() != myProcessName {
+        process.SetName(myProcessName)
+    }
+
+Yikes.
 
 
 #### Stefan Nilsson — [korthaj](https://github.com/korthaj)
