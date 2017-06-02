@@ -598,16 +598,16 @@ a good choice here.
 - local floats might be `x`, `y`, or `z`,
 - and local anonymous strings listen to the names `s` and `t`.
 
-Here's a code snippet that follows the advice in this section.
+Here's a code snippet that follows these naming conventions.
 
     if proc.Running() && proc.Name() != path {
     	proc.SetName(path)
     }
 
-For comparison, here's a slightly more verbose version.
+For comparison, here's a more verbose version of the same code.
 
-    if process.IsRunning() && process.GetName() != myPathName {
-        process.SetName(myPathName)
+    if process.IsRunning() && process.GetProcessName() != pathName {
+        process.SetProcessName(pathName)
     }
 
 Yikes.
