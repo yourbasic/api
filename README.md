@@ -614,6 +614,8 @@ Yikes.
 
 #### Stefan Nilsson — [korthaj](https://github.com/korthaj)
 
+*This work is licensed under a [Creative Commons Attribution 3.0 Unported License][CCBY3].*
+
 [bloom]: https://github.com/yourbasic/bloom
 [bloomexample]: https://godoc.org/github.com/yourbasic/bloom#example-package--Basics
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
