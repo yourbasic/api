@@ -40,7 +40,7 @@
 
 * [Keep it consistent](#keep-it-consistent)
 * [Write functions that need little and give much](#write-functions-that-need-little-and-give-much)
-* [Find a well-fitting interface](#find-a-well-fitting-interface)
+* [Discover a well-fitting interface](#discover-a-well-fitting-interface)
 * [Make it generic](#make-it-generic)
 * [Names, keep them short and sweet](#names-keep-them-short-and-sweet)
 
@@ -304,14 +304,14 @@ the time of day or some other nasty surprise.)
 
 #### Java detour
 
-The `static` keyword in Java has a bad reputation. Probably because
+The `static` keyword in Java has got a bad reputation. Probably because
 it has so many different meanings. A static field is essentially a
 global variable, and you typically want to avoid those.
+A static method, however, is Java's way to declare a function,
+as opposed to a method. This is a case where Java makes you jump
+through hoops to do the right thing.
 
-A static method, however, is Java's twisted way to declare
-a function, as opposed to a method. This is a case where Java
-makes you jump through hoops to do the right thing. Functions
-are great also for Java programmers. Don't be afraid to use them.
+Functions are great also for Java programmers. Don't be afraid to use them.
 
 #### Objects
 
@@ -324,8 +324,9 @@ The rest is mostly bells and whistles.
 
 #### Inheritance
 
-Inheritance is pretty complicated. The older I get, the more seldom I feel
-the need to use it. There are simpler and safer ways to design software.
+Inheritance and method overriding is pretty complicated.
+Fortunately, **interfaces** and plain old **composition**
+can typically get the job done in a simpler and safer way.
 
 
 ### Don't use a lot where a little will do
@@ -342,11 +343,12 @@ Adding to Browning's advice would be a mistake. Instead, a war story:
 
 The `java.io`, `java.nio`, `java.nio.channels`, `java.nio.channels.spi`,
 `java.nio.file`, `java.nio.file.attribute`, `java.nio.file.spi`,
-`java.nio.charset`,  and `java.nio.charset.spi` packages have many methods.
-In fact, the API is so overwhelming that many of us end up at [Stack Overflow][so]
-trying to move streams of bytes in and out of our Java programs.
-Unfortunately, many of the friendly people who share code snippets
-on Stack Overflow didn't read the full spec either, and got it wrong.
+`java.nio.charset`,  and `java.nio.charset.spi` packages have many classes
+and even more methods. In fact, the API is so overwhelming that many of us
+end up at [Stack Overflow][so] trying to move streams of bytes in and out
+of our Java programs. Unfortunately, many of the friendly people who share
+code snippets on Stack Overflow didn't read the full spec either,
+and got it wrong.
 
 For many years I didn't know that my Java programs used the platform
 default character encoding. That's an ugly bug, and I'm not the only one
@@ -358,10 +360,9 @@ low-level operations on many diverse platforms. But please, don't
 add more fuel to the fire.
 
 The Go `io` package is a fresh new start. The library takes some
-getting used to, but it's small and manageable and handles the most
-common use cases well. Unfortunately, no amount of API design can
-fully protect us from the thorny history of file systems and
-fleeting memory technologies.
+getting used to, but it's small and manageable and handles common
+use cases well. Unfortunately, no amount of API design can fully protect
+us from the thorny history of file systems and fleeting memory technologies.
 
 
 ### One package, one idea
@@ -400,12 +401,6 @@ The `add` method in Java's `ArrayList` is a case in point:
 This method makes it easy to do the wrong thing. Adding a new element
 to the middle of an array is really inefficient; something you should
 typically avoid. That's what we have hash tables for.
-
-I know that it's difficult to say no when the kids are throwing a tantrum.
-But remember The 5th Commandment (not the one about honouring thy father
-and thy mother), the one that says that a software library needs to be
-backwards compatible. You might be able to beat your candy addiction,
-but you don't get to remove anything from an API.
 
 
 ### Math is simple
@@ -513,7 +508,7 @@ is the better approach.
 
 Grand ideas and theories aside, human artefacts
 are built by combining the right bits and pieces.  
-This is a list of tried-and-true API building blocks.
+This is a list of tried and trusted API building blocks.
 
 ![tool](res/tool.jpg)
 
@@ -536,7 +531,7 @@ Java's `System.out.println` and Go's `fmt.Println` are real workhorses.
 They'll take any input and offer lots of important information in return.
 This is something we should strive for in our own API design.
 
-### Find a well-fitting interface
+### Discover a well-fitting interface
 
 The reason the print methods in Java and Go are so powerful
 is not only that they take any input, they are also able
@@ -569,7 +564,7 @@ The corresponding setter function, if needed, would still
 be called `SetName`. Likewise, `Running` is a viable alternative
 to `IsRunning`.
 
-A pithy noun or noun phrase is often an ideal name for a constant,
+A pithy noun or noun phrase is often a fitting name for a constant,
 a type, or a field of an object or a struct, considering that such names
 often need to be recognized over longer stretches of code.
 
