@@ -451,7 +451,7 @@ Eat your own dog food. Lorne Greene said it. Don Knuth did it.
 
 ![Lorne Greene](res/greene.jpg)
 
-*Dog food commercial featuring Lorne Greene, 1970s.*
+*Alpo dog food commercial featuring Lorne Greene, 1970s.*
 
 
 ![Don Knuth](res/knuth.jpg)
