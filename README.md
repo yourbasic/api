@@ -51,6 +51,16 @@ The aim of this text is to explore API design and try to find
 strategies and rules that can help us create code libraries
 that are safe, efficient and easy to use.
 
+The text comes with three accompanying examples:
+
+- [fenwick][fenwick] is a tiny example intended to illustrate
+  the 5 Commandments.
+- [bloom][bloom] is a more intricate example, with nontrivial
+  semantics, performance and compatibility issues.
+- [graph][graph] is a full-scale example presenting challenging
+  design decisions leading to interfaces, complementary and
+  auxiliary types and data structures, and subpackages.
+
 Many examples are in [Go][go], the language itself being
 a case study of good API design, with clean and simple
 interfaces on top of a huge complex implementation.
@@ -609,6 +619,7 @@ Yikes.
 
 #### Stefan Nilsson — [korthaj](https://github.com/korthaj)
 
+[bloom]: https://github.com/yourbasic/bloom
 [bloomexample]: https://godoc.org/github.com/yourbasic/bloom#example-package--Basics
 [BSD2]: https://opensource.org/licenses/BSD-2-Clause
 [CC0]: https://creativecommons.org/publicdomain/zero/1.0/deed.en
