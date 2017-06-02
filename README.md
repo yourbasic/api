@@ -51,25 +51,25 @@ The aim of this text is to explore API design and try to find
 strategies and rules that can help us create code libraries
 that are safe, efficient and easy to use.
 
-The text comes with three accompanying examples:
+The text comes with three example libraries:
 
 - [fenwick][fenwick] is a tiny example intended to illustrate
-  the 5 Commandments.
-- [bloom][bloom] is a more intricate example, with nontrivial
-  semantics, performance and compatibility issues.
-- [graph][graph] is a full-scale example presenting challenging
-  design decisions leading to interfaces, complementary and
-  auxiliary types and data structures, and subpackages.
+  the 5 Commandments in Chapter 1.
+- [bloom][bloom] is a more intricate example, with tricky semantics,
+  performance and compatibility issues.
+- [graph][graph] is a full-scale library with challenging
+  design decisions leading to new interfaces, complementary and
+  auxiliary data structures, and subpackages.
 
-Many examples are in [Go][go], the language itself being
+Most examples are in [Go][go], the language itself being
 a case study of good API design, with clean and simple
 interfaces on top of a huge complex implementation.
 There are also a few examples in [Java][java], a language
-that has had more time to accumulate cruft in the form of
+that has had more time to accumulate crud in the form of
 superfluous and dysfunctional elements.
 
 The `go` keyword is particularly striking: the syntax couldn't
-be simpler and the semantics are explained in
+be simpler and the semantics are defined in
 [eight lines of text](https://golang.org/ref/spec#Go_statements)
 in the language specification. Still, you rarely hear complaints
 about thread support being limited in Go.
@@ -81,8 +81,8 @@ doesn't even mention the concept explicitly. It just works.
 
 Even though API design is as much an art as a science, there still
 are some fundamental rules that you should be aware of. Rules that
-will cost you dearly if you break them. Enough so that they
-deserve to be known as **The 5 Commandments**.
+will cost you dearly if you break them. That's why the first chapter
+is called **The 5 Commandments**.
 
 
 # The 5 Commandments
@@ -107,7 +107,7 @@ Still, it's not uncommon to see a `README` file that starts with
 "Candide now supports the Pangloss 3.2 file format",
 but never tells what Candide is and what it has to offer.
 
-In the [Fenwick repo][fenwick] I stick my neck out and try to
+In the [fenwick repo][fenwick] I stick my neck out and try to
 implement a small library that follows The 5 Commandments.
 Its `README` file starts like this:
 
@@ -173,7 +173,7 @@ that get this right. In general, a Go programmer doesn't have to,
 and doesn't want to, worry about the intricacies of garbage collection
 and threading. It just works.
 
-In the [Fenwick repo][fenwick] I didn't manage to fully hide the implementation:
+In the [fenwick repo][fenwick] I didn't manage to fully hide the implementation:
 
 - The data type is called `List`, not `Tree`. That's because it **does**
   the job of a list, even though it's implemented as a tree.
@@ -236,8 +236,8 @@ This is the tough one. There are two major challenges here:
 
 It's not enough to just follow this rule, you also need to say that
 you are doing so. As a library provider you're in the business of trust.
-This is why your library needs to explain its compatibility policy,
-and why you should consider using semantic versioning.
+This is why your library needs to explain its **compatibility policy**,
+and why you should consider using **semantic versioning**.
 
 
 #### Compatibility policies
@@ -253,7 +253,7 @@ Fenwick's compatibility policy is very simple, but still explicitly stated:
     is to handle issues that can't be resolved in any other
     reasonable way.
 
-[Go 1 and the Future of Go Programs][gocompat] is a full detailed
+[Go 1 and the Future of Go Programs][gocompat] is a full, detailed
 compatibility document. It's required study for anyone working with
 large-scale library design and maintenance.
 
