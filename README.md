@@ -1,6 +1,6 @@
 # Your basic API
 
-### Thoughts on good API design
+### Thoughts on effective API design
 
 ![go](res/go.jpg)
 
@@ -49,7 +49,7 @@
 
 The aim of this text is to explore API design and try to find
 strategies and rules that can help us create code libraries
-that are safe, efficient and easy to use.
+that are safe, effective and easy to use.
 
 The text comes with three example libraries:
 
