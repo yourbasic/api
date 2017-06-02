@@ -77,9 +77,9 @@ deserve to be known as **The 5 Commandments**.
 
 # The 5 Commandments
 
-Let's start with the basic stuff. The rules never to be broken.
-The rules that we don't need to argue about, but that we still
-need to be reminded of.
+Let's start with the basics. The rules never to be broken.  
+The rules that we don't need to argue about,
+but that we still need to be reminded of.
 
 ![law](res/law.jpg)
 
@@ -89,7 +89,7 @@ need to be reminded of.
 ### 1. Tell me what this thing is
 
 > A software repository should have a `README` file,
-> and this file should say what the project **is about**.
+> and this file should say what the project **is about**.  
 > Preferably in the very first sentence.
 
 If people don't know what it is, they can't use it, duh.
@@ -213,10 +213,10 @@ directory of your repo.
 
 ### 5. Don't change it
 
-> A software library needs to be backwards compatible.
+> A software library needs to be backwards compatible.  
 > It's fine to improve the documentation, change the implementation,
-> and even introduce new features. But, if at all possible,
-> **don't change the API**.
+> and even introduce new features.  
+> But if at all possible, **don't change the API**.
 
 This is the tough one. There are two major challenges here:
 
@@ -269,7 +269,7 @@ the Go project gets it right.
 
 # Keep it simple
 
-Even though API design often requires us to make difficult trade-offs,
+Even though API design often requires us to make difficult trade-offs,  
 a simpler API is almost always a better API.
 
 ![scissors](res/scissors.png)
@@ -320,11 +320,11 @@ the need to use it. There are simpler and safer ways to design software.
 
 ### Don't use a lot where a little will do
 
-    To paint a little thing like that you smeared
-    Carelessly passing with your robes afloat, —
-    Yet do much less, so much less, Someone says,
-    (I know his name, no matter) — so much less!
-    Well, less is more, Lucrezia: I am judged.
+> To paint a little thing like that you smeared  
+> Carelessly passing with your robes afloat, —  
+> Yet do much less, so much less, Someone says,  
+> (I know his name, no matter) — so much less!  
+> Well, less is more, Lucrezia: I am judged.
 
 *From Andrea del Sarto by Robert Browning, 1855.*
 
@@ -430,7 +430,9 @@ can be efficiently implemented in this particular package.
 
 The only certain way to know if an API works as intended
 is to use it over an extended period of time on different
-types of tasks and projects. Don't rush it.
+types of tasks and projects. 
+
+Don't rush it.
 
 ![rest](res/rest.jpg)
 
@@ -449,9 +451,9 @@ Eat your own dog food. Lorne Greene said it. Don Knuth did it.
 
 ![Don Knuth](res/knuth.jpg)
 
-> Thus, I came to the conclusion that the designer of a new system
-> must not only be the implementor and the first large-scale user;
-> the designer should also write the first user manual. The separation
+> Thus, I came to the conclusion that the **designer** of a new system
+> must not only be the **implementor** and the first **large-scale user**;
+> the designer should also **write the first user manual**. The separation
 > of any of these four components would have hurt TeX significantly.
 > If I had not participated fully in all these activities, literally
 > hundreds of improvements would never have been made, because I would
@@ -464,7 +466,8 @@ Eat your own dog food. Lorne Greene said it. Don Knuth did it.
 # Show, don't tell
 
 Tutorials, examples and quick start guides are great tools for
-improving an API. The goal is to make it effortless to get started
+improving an API.  
+The goal is to make it effortless to get started
 and easy to perform common tasks.
 
 ![Anton Chekhov](res/chekhov.jpg)
@@ -498,14 +501,15 @@ is the better approach.
 
 # Tools of the trade
 
+Grand ideas and theories aside, human artefacts
+are built by combining the right bits and pieces.  
+This is a list of tried-and-true API building blocks.
+
 ![tool](res/tool.jpg)
 
 **Hobel mit Spänen und Zimmermannsbleistift**
 *Image by [Uwe Aranas][ua], 2014, [CC BY-SA 3.0][CCBYSA3].*
 
-Grand ideas and theories aside, in the end all human artefacts
-are built by putting together the right bits and pieces.
-This is a growing list of tried-and-true API building blocks.
 
 ### Keep it consistent
 
@@ -544,7 +548,8 @@ There is no way I could have designed this up-front.
 ### Make it generic
 
 A library based on a perfectly fitting interface is
-a perfectly generic library. Think about that.
+a perfectly generic library.  
+Think about that.
 
 ### Names, keep them short and sweet
 
