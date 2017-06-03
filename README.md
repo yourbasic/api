@@ -4,7 +4,7 @@
 
 ![go](res/go.jpg)
 
-[credit]: <> (Image from [Pixabay][pixabaygo], [CC0 1.0][CC0].)
+*Kitsch from [Pixabay][pixabaygo], [CC0 1.0][CC0].*
 
 
 # Table of contents
@@ -93,7 +93,7 @@ but that we still need to be reminded of.
 
 ![law](res/law.jpg)
 
-[credit]: <> (Image from [Pixabay][pixabaylaw], [CC0 1.0][CC0].)
+*More kitsch from [Pixabay][pixabaylaw], [CC0 1.0][CC0].*
 
 
 ### 1. Tell me what this thing is
@@ -284,7 +284,7 @@ a simpler API is almost always a better API.
 
 ![scissors](res/scissors.png)
 
-*Image by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
+*Scissors by [ZooFari][ZF], [CC BY 3.0][CCBY3].*
 
 
 ### Don't use complicated constructs where simple ones will do
@@ -512,7 +512,7 @@ This is a list of tried and trusted API building blocks.
 ![tool](res/tool.jpg)
 
 **Hobel mit Spänen und Zimmermannsbleistift**
-*Image by [Uwe Aranas][ua], 2014, [CC BY-SA 3.0][CCBYSA3].*
+*Photo by [Uwe Aranas][ua], 2014, [CC BY-SA 3.0][CCBYSA3].*
 
 
 ### Keep it consistent
