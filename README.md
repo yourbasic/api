@@ -186,7 +186,7 @@ In the [fenwick repo][fenwick] I didn't manage to fully hide the implementation:
   That wasn't my choice, but I'm the one who included some implementation
   details at the end of the package documentation. Sorry about that.
   
-However, the documentation of the `fenwick.List`data type and its methods
+However, the [documentation][fenwickDOC] of the `fenwick.List`data type and its methods
 describes what the code does without telling anything about how it works.
 This has two major benefits:
 
