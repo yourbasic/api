@@ -400,8 +400,7 @@ The `add` method in Java's `ArrayList` is a case in point:
 
 This method makes it easy to do the wrong thing. Adding a new element
 to the middle of an array is really inefficient; something you should
-typically avoid. That's what we have hash tables for.
-
+typically avoid.
 
 ### Math is simple
 
