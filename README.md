@@ -76,8 +76,10 @@ about thread support being limited in Go.
 
 Garbage collection in Go is another impeccable example.
 The implementation is hideously complicated, while the API
-is null and void: there is no syntax and the language specification
-doesn't even mention the concept explicitly. It just works.
+is minimal: there is no syntax and the language specification
+doesn't even mention the concept explicitly. The runtime library
+offers a single GC tuning parameter and plenty of memory statistics
+for those who need it, but mostly it just works.
 
 Even though API design is as much an art as a science, there still
 are some fundamental rules that you should be aware of. Rules that
