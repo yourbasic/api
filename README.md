@@ -330,6 +330,18 @@ Inheritance and method overriding is pretty complicated.
 Fortunately, **interfaces** and plain old **composition**
 can typically get the job done in a simpler and safer way.
 
+#### Frameworks
+
+Frameworks have steep learning curves and different frameworks
+rarely play nice together. They are like dictators who can't
+cooperate with others and who force you to do everything
+according to their rules.
+
+Unless you're building a new programming language, try to design
+your API as a library rather than a framework. Don't ask the user
+to subscribe to your philosophy and to follow your orders.
+A good API should demand little and offer much.
+
 
 ### Don't use a lot where a little will do
 
