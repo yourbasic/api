@@ -2,7 +2,7 @@
 
 ### Thoughts on effective API design
 
-![go](res/go.jpg)
+[![go](res/go.jpg)](#table-of-contents)
 
 *Kitsch from [Pixabay][pixabaygo], [CC0 1.0][CC0].*
 
