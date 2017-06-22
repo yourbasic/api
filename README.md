@@ -583,20 +583,22 @@ often need to be recognized over longer stretches of code.
 
 Here is a first-rate example from Go's aptly named `net/http` package.
 
-    // A Client is an HTTP client. […]
-    type Client struct {
-        // Transport specifies the mechanism by which individual HTTP requests are made. […]
-        Transport RoundTripper
-        
-        // CheckRedirect specifies the policy for handling redirects. […]
-        CheckRedirect func(req *Request, via []*Request) error
-        
-        // Jar specifies the cookie jar. […]
-        Jar CookieJar
-        
-        // Timeout specifies a time limit for requests made by this Client. […]
-        Timeout time.Duration
-    }
+```go
+// A Client is an HTTP client. […]
+type Client struct {
+	// Transport specifies the mechanism by which individual HTTP requests are made. […]
+	Transport RoundTripper
+
+	// CheckRedirect specifies the policy for handling redirects. […]
+	CheckRedirect func(req *Request, via []*Request) error
+
+	// Jar specifies the cookie jar. […]
+	Jar CookieJar
+
+	// Timeout specifies a time limit for requests made by this Client. […]
+	Timeout time.Duration
+}
+```
 
 When naming interfaces, we're obliged to do what the Roman's do.
 In Java it's `Comparable` and `Serializable`; in Go it's `Reader`,
@@ -613,15 +615,19 @@ a good choice here.
 
 Here's a code snippet that follows these naming conventions.
 
-    if proc.Running() && proc.Name() != path {
-    	proc.SetName(path)
-    }
+```go
+if proc.Running() && proc.Name() != path {
+	proc.SetName(path)
+}
+```
 
 For comparison, here's a more verbose version of the same code.
 
-    if process.IsRunning() && process.GetProcessName() != pathName {
-        process.SetProcessName(pathName)
-    }
+```go
+if process.IsRunning() && process.GetProcessName() != pathName {
+	process.SetProcessName(pathName)
+}
+```
 
 Yikes.
 
